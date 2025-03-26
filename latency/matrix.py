@@ -29,7 +29,7 @@ def distance_compute(lat1, lon1, lat2, lon2):
     return distance
 
 
-def matrix_gen(file_path,infinit):
+def distance_matrix_gen(file_path, infinit):
     """
     将文本文件解析为距离矩阵，其中两点之间的距离使用 distance_compute 函数计算。
 
@@ -37,7 +37,7 @@ def matrix_gen(file_path,infinit):
     - file_path: 存储节点信息的输入文件路径。
 
     返回值:
-    - 距离矩阵 (二维列表)
+    - 距离矩阵 (二维列表),交换机数量，链路数量
     """
     # 存储每个节点的位置信息 {id: (lat, lon)}
     node_positions = {}
@@ -71,9 +71,9 @@ def matrix_gen(file_path,infinit):
             target_id = int(target.group(1))
             edges.append((source_id, target_id))  # 添加边信息
     # nodes_positions记录了全部的节点，edges记录了全部的边
-    node_ids = sorted(node_positions.keys());n = len(node_ids);en=len(edges);print(n);print(en)
-    print(node_positions)
-    print(edges)
+    node_ids = sorted(node_positions.keys());n = len(node_ids);en=len(edges)
+    #print(node_positions)
+    #print(edges)
     # 构造初始矩阵
     dis_matrix = [[infinit for _ in range(n)] for _ in range(n)]
     # 填入初始数值
@@ -87,7 +87,25 @@ def matrix_gen(file_path,infinit):
                 if x == y:
                     dis_matrix[x][y] = 0.0
                 dis_matrix[x][y] = min(dis_matrix[x][y],dis_matrix[x][z]+dis_matrix[z][y])
-    return dis_matrix
+    return dis_matrix,n,en
+
+def delay_matrix_gen(dis_matrix, infinite):
+    """
+        将距离转换成延迟，参考了GitHub上的转换代码，考虑将非真空条件下的光速设置为
+        c=1.97 * 10**8 m/s
+        t = distance / speed of light
+        t (in ms) = ( distance in km * 1000 (for meters) ) / ( speed of light / 1000 (for ms))
+
+        参数:
+        - dis_matrix: 存储节点间距离的矩阵。
+
+        返回值:
+        - 延迟矩阵
+    """
+    c=1.97 * 10**8
+    delay_matrix = [[element*1000/(c/1000) if element != infinite else element for element in row] for row in dis_matrix]
+    return delay_matrix
+
 # 测试函数
 if __name__ == "__main__":
     # 假设输入文件是 "nodes.txt"
@@ -100,6 +118,6 @@ if __name__ == "__main__":
     # Bellcanada 48节点 64条边
     # Iris 51节点，64条边
     file_path = "Iris.txt"
-    matrix = matrix_gen(file_path,infinite)
+    matrix = distance_matrix_gen(file_path,infinite)
     for row in matrix:
         print(row)
