@@ -43,7 +43,7 @@ def find_controller_place(matrix, k):
 
             # 计算当前组合的时延
         sc_avg, sc_worst, cc_avg, cc_worst = compute_latency(matrix, switch_set, controller_place)
-        total_latency = sc_avg + cc_avg  # 综合时延指标（可调整权重）
+        total_latency = sc_avg + cc_avg  # 综合时延指标（可调整权重）,这个位置的具体计算方法文章也没说，后面调一下权重就行
 
         # 更新最优解
         if total_latency < best_latency:
