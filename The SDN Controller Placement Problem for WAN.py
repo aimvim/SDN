@@ -155,6 +155,11 @@ def Spectral_Clustering(A,W,k):
     clusters,centers = K_Cluster(Y,k)
     return clusters
 
+def function(G,cluster):
+    # 分片内穷举最佳位置
+    # return controller_place
+    pass
+
 if __name__ == "__main__":
     # 假设输入文件是 "nodes.txt"
     infinite = 99999
@@ -165,8 +170,15 @@ if __name__ == "__main__":
     # Ntelos 48节点，61条边
     # Bellcanada 48节点 64条边
     # Iris 51节点，64条边
-    file_path = ("Netrail.txt")
+    file_path = ("Iris.txt")
     c = 3 * 10 ** 5
     v = (c * 2) / 3
     matrix,W = matrix_gen(file_path, 9999, v)
-    print(Spectral_Clustering(matrix,W,3))
+    print(Spectral_Clustering(matrix,W,5)) # 拓扑-k
+
+# function()
+# 测这两个时延和负载均衡
+# 测这两个方案 控制器位置算出来的时间
+# 三个算法也测一下
+# 我们的算法后面再说（量子退火）
+# chuchu:我去写 （实验 + 方案）

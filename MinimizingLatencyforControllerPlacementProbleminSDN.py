@@ -96,3 +96,4 @@ if __name__ == "__main__":
     v = (c * 2) / 3
     matrix = matrix_gen(file_path,9999,v)
     print(find_controller_place(matrix, 5))
+    # 计算find_*** 100遍就行（拓扑   k的值）
