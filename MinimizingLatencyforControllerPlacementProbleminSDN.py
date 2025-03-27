@@ -43,7 +43,7 @@ def find_controller_place(matrix, k):
 
             # 计算当前组合的时延
         sc_avg, sc_worst, cc_avg, cc_worst = compute_latency(matrix, switch_set, controller_place)
-        total_latency = sc_avg + cc_avg  # 综合时延指标（可调整权重）,这个位置的具体计算方法文章也没说，后面调一下权重就行
+        total_latency = 0.95*sc_avg + 0.05*cc_avg  # 综合时延指标（可调整权重）,这个位置的具体计算方法文章也没说，后面调一下权重就行
 
         # 更新最优解
         if total_latency < best_latency:
@@ -67,8 +67,8 @@ def compute_latency(matrix,switch_set,controller_place):
             sc_worst_latency = max(sc_worst_latency,matrix[controller_place[i]][switch_set[i][z]])
             sc_average_latency += matrix[controller_place[i]][switch_set[i][z]]
     sc_average_latency = sc_average_latency/(n+len(matrix)) # 总时延除以平均时延
-    for x in range(n):
-        for y in range(n):
+    for x in controller_place:
+        for y in controller_place:
             if y > x:
                 cc_worst_latency = max(cc_worst_latency,matrix[x][y])
                 cc_average_latency += matrix[x][y]
@@ -95,5 +95,7 @@ if __name__ == "__main__":
     c = 3 * 10 ** 5
     v = (c * 2) / 3
     matrix = matrix_gen(file_path,9999,v)
-    print(find_controller_place(matrix, 5))
+    best_controller_place, best_switch_set = find_controller_place(matrix, 4)
+    print(best_controller_place, best_switch_set )
+    print(compute_latency(matrix,best_switch_set,best_controller_place))
     # 计算find_*** 100遍就行（拓扑   k的值）
