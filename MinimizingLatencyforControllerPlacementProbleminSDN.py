@@ -1,5 +1,5 @@
-from sympy.strategies.core import switch
-
+import numpy as np
+import timeit
 from matrix import *
 
 # 这篇文章简单，玩法是直接给你上穷举
@@ -66,7 +66,7 @@ def compute_latency(matrix,switch_set,controller_place):
         for z in range(j):
             sc_worst_latency = max(sc_worst_latency,matrix[controller_place[i]][switch_set[i][z]])
             sc_average_latency += matrix[controller_place[i]][switch_set[i][z]]
-    sc_average_latency = sc_average_latency/(n+len(matrix)) # 总时延除以平均时延
+    sc_average_latency = sc_average_latency/(len(matrix)) # 总时延除以平均时延
     for x in controller_place:
         for y in controller_place:
             if y > x:
@@ -75,27 +75,47 @@ def compute_latency(matrix,switch_set,controller_place):
     cc_average_latency = cc_average_latency/n
     return sc_average_latency,sc_worst_latency,cc_average_latency,cc_worst_latency
 
-def load(switch_set,controller_place):
+def load(switch_set):
     # 传入参数为matrix, swtich_set   controller_place
-    maxs = 0;mins = 999;n=0
+    #maxs = 0;mins = 999;n=0
+    controller_count = []
     for switch in switch_set:
-        n += len(switch)
-        maxs = max(maxs,len(switch))
-        mins = min(mins,len(switch))
-    k = 1-(maxs-mins)/(n/len(controller_place))
-    return k
+    #     n += len(switch)
+    #     maxs = max(maxs,len(switch))
+    #     mins = min(mins,len(switch))
+    # k = 1-(maxs-mins)/(n/len(controller_place))
+        controller_count.append(len(switch))
+
+    return np.std(controller_count)
 
 def reliance():
     pass
 
 
-if __name__ == "__main__":
-    file_path="Iris.txt"
-    # 光速 * 2/3
-    c = 3 * 10 ** 5
-    v = (c * 2) / 3
-    matrix = matrix_gen(file_path,9999,v)
-    best_controller_place, best_switch_set = find_controller_place(matrix, 4)
-    print(best_controller_place, best_switch_set )
-    print(compute_latency(matrix,best_switch_set,best_controller_place))
-    # 计算find_*** 100遍就行（拓扑   k的值）
+def mini_algorithm(toponame, contronller_num,test_num):
+    dis_matrix,n,en = distance_matrix_gen(toponame, 9999)
+    delay_matrix = delay_matrix_gen(dis_matrix, 9999)
+    controller_place, switch_set = find_controller_place(delay_matrix, contronller_num)
+    run_time = timeit.timeit(lambda: find_controller_place(delay_matrix, contronller_num), number=test_num)
+    run_time /= test_num
+    sc_average_latency, sc_worst_latency, cc_average_latency, cc_worst_latency=\
+        compute_latency(delay_matrix, switch_set, controller_place)
+    loadd=load(switch_set)
+    return toponame,n,en,contronller_num,sc_average_latency,sc_worst_latency,cc_average_latency,cc_worst_latency,loadd,run_time
+
+
+# if __name__ == "__main__":
+#     file_path="Bellcanada.txt"
+#     # 光速 * 2/3
+#     c = 3 * 10 ** 5
+#     v = 1.97 * 10 ** 8
+#     k=6
+#     dis_matrix = distance_matrix_gen(file_path,9999)
+#     delay_matrix = delay_matrix_gen(dis_matrix,9999)
+#     controller_place,switch_set = find_controller_place(delay_matrix,k)
+#     print(controller_place, switch_set)
+#     run_time = timeit.timeit(lambda :find_controller_place(delay_matrix,k),number=10)
+#     print(compute_latency(delay_matrix, switch_set, controller_place))
+#     print(f"负载为：{load(switch_set)}")
+#     print(f"平均计算时间为：{run_time/10}")
+#     # 计算find_*** 100遍就行（拓扑   k的值）

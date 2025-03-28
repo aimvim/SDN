@@ -1,7 +1,10 @@
 import random
+import timeit
+
 import numpy as np
 import networkx as nx
 from deap import base, creator, tools
+import matrix_not_short as mas
 import matrix as ma
 
 # ====================== 初始化 DEAP 个体结构 ======================
@@ -11,12 +14,15 @@ creator.create("Individual", list, fitness=creator.FitnessMulti)
 
 # ====================== 输入参数初始化 ======================
 #num_switches = 50  # 交换机数量
-num_controllers = 3  # 控制器数量
+num_controllers = 6  # 控制器数量
 failure_prob_per_unit = 0.01  # 单位距离故障概率
 infinit = 99999
+toponame = "Netrail.txt"
+test_num = 100
 
-distance_matrix, num_switches, num_links = ma.distance_matrix_gen("Iris.txt", infinit)
-delay_matrix = ma.delay_matrix_gen(distance_matrix, infinit)
+distance_matrix, num_switches, num_links = mas.distance_matrix_gen(toponame, infinit)
+dis_matrix, _, _ = ma.distance_matrix_gen(toponame, infinit)
+delay_matrix = ma.delay_matrix_gen(dis_matrix, infinit)
 
 # # 示例数据生成（实际场景需替换为真实数据）
 # delay_matrix = np.random.rand(num_switches, num_switches)
@@ -29,7 +35,7 @@ delay_matrix = ma.delay_matrix_gen(distance_matrix, infinit)
 G = nx.Graph()
 for i in range(num_switches):
     for j in range(i + 1, num_switches):
-        if distance_matrix[i][j] > 0:
+        if distance_matrix[i][j] < infinit:
             G.add_edge(i, j, weight=distance_matrix[i][j])
 shortest_distances = dict(nx.all_pairs_dijkstra_path_length(G))
 
@@ -54,6 +60,7 @@ def evaluate(solution):
 
     # 目标1: 平均时延
     avg_delay = np.mean(delays)
+    worst_delay = max(delays)
 
     # 目标2: 负载均衡标准差
     load_counts = [assignments.count(c) for c in controllers]
@@ -62,7 +69,7 @@ def evaluate(solution):
     # 目标3: 平均存活概率
     avg_survival = np.mean(survival_probs)
 
-    return (avg_delay, load_std, avg_survival)
+    return (avg_delay, load_std, avg_survival),worst_delay
 
 
 # ====================== 支配关系判断函数 ======================
@@ -111,7 +118,7 @@ def mopso_optimization():
         # 创建 DEAP 个体
         position = repair_position([random.uniform(0, num_switches) for _ in range(num_controllers)])
         ind = creator.Individual(position)
-        ind.fitness.values = evaluate(ind)
+        ind.fitness.values,worst_delay = evaluate(ind)
         particles.append({
             'position': position,
             'velocity': [random.uniform(-1, 1) for _ in range(num_controllers)],
@@ -162,7 +169,7 @@ def mopso_optimization():
 
             # 计算新解适应度
             new_ind = creator.Individual(new_position)
-            new_ind.fitness.values = evaluate(new_ind)
+            new_ind.fitness.values,worst_delay = evaluate(new_ind)
 
             # 更新个体最优（若新解非支配）
             if not is_dominated(new_ind.fitness.values, p['best_fitness']):
@@ -180,11 +187,36 @@ def mopso_optimization():
             p['velocity'] = new_velocity
 
             # 提取帕累托前沿
-    return archive
+    return archive,worst_delay
+
+
+def save_results_to_file_mopso(filename, toponame, nodes_num, links_num, controller_num, avg_latency,
+                         worst_latency,load,avg_compute_time):
+    '''
+
+    :param filename: 要存入数据的文件名
+    :return:
+    '''
+    toponame = toponame.replace(".txt","")
+    with open(filename,'a') as f:
+        f.write(f"mopso_{toponame}_{controller_num}{{\n")
+        f.write(f'    "toponame":"{toponame}"\n')
+        f.write(f'    "nodes_num":{nodes_num}\n')
+        f.write(f'    "links_num":{links_num}\n')
+        f.write(f'    "controller_num":{controller_num}\n')
+        f.write(f'    "avg_latency":{avg_latency}\n')
+        f.write(f'    "worst_latency":{worst_latency}\n')
+        f.write(f'    "load":{load}\n')
+        f.write(f'    "avg_compute_time":{avg_compute_time}\n')
+        f.write(f"}}\n")
 
 
 # ====================== 运行优化 ======================
-pareto_front = mopso_optimization()
+pareto_front, worst_delay = mopso_optimization()
+
+#计算算法运行时间
+runtime = timeit.timeit(mopso_optimization,number=test_num)/test_num
+
 
 # 示例：选择拥挤度最大的解作为代表性解
 fronts = tools.sortNondominated(pareto_front, len(pareto_front), first_front_only=True)
@@ -195,6 +227,9 @@ best_solution = fronts[0][best_idx]
 
 print("帕累托前沿解数量:", len(pareto_front))
 print("代表性解控制器位置:", sorted(best_solution))
-print(f"平均时延: {best_solution.fitness.values[0]:.3f}")
-print(f"负载标准差: {best_solution.fitness.values[1]:.3f}")
-print(f"平均存活概率: {best_solution.fitness.values[2]:.3f}")
+print(f"平均时延: {best_solution.fitness.values[0]}")
+print(f"负载标准差: {best_solution.fitness.values[1]}")
+print(f"平均存活概率: {best_solution.fitness.values[2]}")
+save_results_to_file_mopso("..\\test_data.txt", toponame, num_switches, num_links,
+                           num_controllers, best_solution.fitness.values[0],worst_delay,
+                           best_solution.fitness.values[1],runtime)

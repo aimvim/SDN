@@ -1,3 +1,6 @@
+import itertools
+import timeit
+
 from matrix import distance_compute
 import re
 import numpy as np
@@ -67,7 +70,7 @@ def matrix_gen(file_path,infinit,v):
                 if x == y:
                     dis_matrix[x][y] = 0.0
                 dis_matrix[x][y] = min(dis_matrix[x][y],dis_matrix[x][z]+dis_matrix[z][y])
-    return dis_matrix,W
+    return dis_matrix,W,n,en
 
 
 def get_first_k_columns(L, k):
@@ -155,30 +158,76 @@ def Spectral_Clustering(A,W,k):
     clusters,centers = K_Cluster(Y,k)
     return clusters
 
-def function(G,cluster):
+def compute_latency(matrix,cluster,controller_place):
+    avg_latency = 0.0
+    worst_latency = 0.0
+    for i, controller in enumerate(controller_place):
+        for j, switch in enumerate(cluster[i]):
+            avg_latency += matrix[switch][controller]
+            worst_latency=max(worst_latency, matrix[switch][controller])
+    avg_latency = avg_latency/len(matrix)
+    return avg_latency,worst_latency
+
+def ocpp(matrix,cluster):
     # 分片内穷举最佳位置
-    # return controller_place
-    pass
+    #目前是按平均延迟最小进行
+    # return controller_place,avg_latency
+    res=[]
+    all_possible_place=list(itertools.product(*cluster))
+    for controller_place in all_possible_place:
+        avg_latency,worst_latency=compute_latency(matrix,cluster,controller_place)
+        res.append((controller_place,avg_latency,worst_latency))
+    if res:
+        min_tuple = min(res,key=lambda x:x[1])
+    return min_tuple[0],min_tuple[1],min_tuple[2]
 
-if __name__ == "__main__":
-    # 假设输入文件是 "nodes.txt"
-    infinite = 99999
-    # Ntt 47个节点，216条边(有一大堆边重合),先别用
-    # 下面几个也是有重合边的，说实话我不知道这个怎么去处理，写算法吧
-    # Bics 33节点， 48条边
-    # Arnes 34节点，47条边
-    # Ntelos 48节点，61条边
-    # Bellcanada 48节点 64条边
-    # Iris 51节点，64条边
-    file_path = ("Iris.txt")
-    c = 3 * 10 ** 5
-    v = (c * 2) / 3
-    matrix,W = matrix_gen(file_path, 9999, v)
-    print(Spectral_Clustering(matrix,W,5)) # 拓扑-k
+def load(cluster):
+    controller_count = []
+    for switch in cluster:
+        controller_count.append(len(switch))
+    return np.std(controller_count)
 
-# function()
-# 测这两个时延和负载均衡
-# 测这两个方案 控制器位置算出来的时间
-# 三个算法也测一下
-# 我们的算法后面再说（量子退火）
-# chuchu:我去写 （实验 + 方案）
+
+def the_algorithm(toponame, controller_num, test_num):
+    v = 1.97 * 10 ** 5
+    matrix, W, n, en = matrix_gen(toponame, 9999, v)
+    cluster = Spectral_Clustering(matrix, W, controller_num)
+    controllers_place, avg_latency, worst_latency = ocpp(matrix, cluster)
+    loadd = load(cluster)
+    run_time = timeit.timeit(lambda: Spectral_Clustering(matrix, W, controller_num), number=test_num)
+    run_time += timeit.timeit(lambda: ocpp(matrix, cluster), number=test_num)
+    run_time /= test_num
+    return toponame,n,en,controller_num,avg_latency,worst_latency,loadd,run_time
+
+
+# if __name__ == "__main__":
+#     # 假设输入文件是 "nodes.txt"
+#     infinite = 99999
+#     # Ntt 47个节点，216条边(有一大堆边重合),先别用
+#     # 下面几个也是有重合边的，说实话我不知道这个怎么去处理，写算法吧
+#     # Bics 33节点， 48条边
+#     # Arnes 34节点，47条边
+#     # Ntelos 48节点，61条边
+#     # Bellcanada 48节点 64条边
+#     # Iris 51节点，64条边
+#     file_path = ("Iris.txt")
+#     c = 3 * 10 ** 5
+#     v = 1.97*10**5
+#     k=3
+#     matrix,W = matrix_gen(file_path, 9999, v)
+#     cluster=Spectral_Clustering(matrix, W, k)
+#     controllers_place, avg_latency, worst_latency = ocpp(matrix, cluster)
+#     print(cluster)
+#     print(controllers_place)
+#     print(f"平均延迟：{avg_latency}")
+#     print(f"最坏延迟为：{worst_latency}")
+#     print(f"负载为：{load(cluster)}")
+#     run_time=timeit.timeit(lambda :Spectral_Clustering(matrix, W, k),number=100)
+#     run_time+=timeit.timeit(lambda :ocpp(matrix, cluster),number=100)
+#     print(f"平均运行时间：{run_time/100}")
+# # function()
+# # 测这两个时延和负载均衡
+# # 测这两个方案 控制器位置算出来的时间
+# # 三个算法也测一下
+# # 我们的算法后面再说（量子退火）
+# # chuchu:我去写 （实验 + 方案）

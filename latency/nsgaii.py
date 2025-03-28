@@ -1,15 +1,21 @@
+import timeit
+
 import numpy as np
 import networkx as nx
 from deap import base, creator, tools, algorithms
 import random
+import matrix_not_short as mas
 import matrix as ma
 # ====================== 输入参数初始化 ======================
 #num_switches = 50  # 交换机数量
-num_controllers = 3  # 控制器数量
+num_controllers = 6  # 控制器数量
 population_size = 50  # 种群大小
 max_generations = 100  # 最大迭代次数
 failure_prob_per_unit = 0.01  # 单位距离故障概率
 infinit = 99999
+toponame = "Netrail.txt"
+worst_delay=0.0
+test_num = 100
 
 # 示例数据生成（实际场景需替换为真实数据）
 # delay_matrix = np.random.rand(num_switches, num_switches)
@@ -17,8 +23,9 @@ infinit = 99999
 
 # distance_matrix = np.random.randint(1, 10, (num_switches, num_switches))
 # np.fill_diagonal(distance_matrix, 0)
-distance_matrix, num_switches, num_links = ma.distance_matrix_gen("Iris.txt", infinit)
-delay_matrix = ma.delay_matrix_gen(distance_matrix, infinit)
+distance_matrix, num_switches, num_links = mas.distance_matrix_gen(toponame, infinit)
+dis_matrix, _, _ = ma.distance_matrix_gen(toponame, infinit)
+delay_matrix = ma.delay_matrix_gen(dis_matrix, infinit)
 
 # 构建网络拓扑并计算最短路径
 G = nx.Graph()
@@ -27,7 +34,7 @@ for i in range(num_switches):
         if distance_matrix[i][j] > 0:
             G.add_edge(i, j, weight=distance_matrix[i][j])
 shortest_distances = dict(nx.all_pairs_dijkstra_path_length(G))
-print(shortest_distances)
+
 
 # ====================== 修复重复控制器位置的函数 ======================
 def repair_duplicates(individual):
@@ -75,6 +82,7 @@ def evaluate(individual):
     return (avg_delay, load_std, avg_survival)
 
 
+
 # ====================== NSGA-II 配置 ======================
 creator.create("FitnessMulti", base.Fitness, weights=(-1.0, -1.0, 1.0))
 creator.create("Individual", list, fitness=creator.FitnessMulti)
@@ -119,6 +127,37 @@ population, logbook = algorithms.eaMuPlusLambda(
     verbose=True
 )
 
+run_time = timeit.timeit(lambda :algorithms.eaMuPlusLambda(
+    population, toolbox,
+    mu=population_size,
+    lambda_=population_size,
+    cxpb=0.8,
+    mutpb=0.2,
+    ngen=max_generations,
+    stats=stats,
+    verbose=True
+),number=test_num)/test_num
+
+def save_results_to_file_nsgaii(filename, toponame, nodes_num, links_num, controller_num, avg_latency,
+                         worst_latency,load,avg_compute_time):
+    '''
+
+    :param filename: 要存入数据的文件名
+    :return:
+    '''
+    toponame = toponame.replace(".txt","")
+    with open(filename,'a') as f:
+        f.write(f"nsgaii_{toponame}_{controller_num}{{\n")
+        f.write(f'    "toponame":"{toponame}"\n')
+        f.write(f'    "nodes_num":{nodes_num}\n')
+        f.write(f'    "links_num":{links_num}\n')
+        f.write(f'    "controller_num":{controller_num}\n')
+        f.write(f'    "avg_latency":{avg_latency}\n')
+        f.write(f'    "worst_latency":{worst_latency}\n')
+        f.write(f'    "load":{load}\n')
+        f.write(f'    "avg_compute_time":{avg_compute_time}\n')
+        f.write(f"}}\n")
+
 # ====================== 结果提取 ======================
 pareto_front = tools.sortNondominated(population, len(population), first_front_only=True)[0]
 
@@ -128,6 +167,17 @@ best_solution = min(pareto_front,
                     key=lambda ind: sum(w * val for w, val in zip(weights, ind.fitness.values)))
 
 print("最优控制器位置:", best_solution)
-print(f"平均时延: {best_solution.fitness.values[0]:.3f}")
-print(f"负载标准差: {best_solution.fitness.values[1]:.3f}")
-print(f"平均存活概率: {best_solution.fitness.values[2]:.3f}")
+print(f"平均时延: {best_solution.fitness.values[0]}")
+print(f"负载标准差: {best_solution.fitness.values[1]}")
+print(f"平均存活概率: {best_solution.fitness.values[2]}")
+
+#求最坏延迟
+delayss = []
+for switch in range(num_switches):
+    closest = min(best_solution, key=lambda c: delay_matrix[switch][c])
+    delay = delay_matrix[switch][closest]
+    delayss.append(delay)
+    worst_delay = max(delayss)
+
+save_results_to_file_nsgaii("..\\test_data.txt",toponame,num_switches,num_links,num_controllers,
+                            best_solution.fitness.values[0],worst_delay,best_solution.fitness.values[1],run_time)

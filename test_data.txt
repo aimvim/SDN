@@ -1,0 +1,1511 @@
+mini_Iris_1{
+    "topo_name":"Iris",
+    "nodes_num":51,
+    "links_num":64,
+    "controller_num":1,
+    "avg_latency":1.1073704861626805,
+    "worst_latency":2.2982414806721145,
+    "cc_avg":0.0,
+    "cc_worst":0.0,
+    "load":0.0,
+    "avg_compute_time":0.0007596940000075846
+}
+mini_Iris_2{
+    "topo_name":"Iris",
+    "nodes_num":51,
+    "links_num":64,
+    "controller_num":2,
+    "avg_latency":0.7071999384577774,
+    "worst_latency":1.774893661636563,
+    "cc_avg":0.7548564013418645,
+    "cc_worst":1.509712802683729,
+    "load":1.5,
+    "avg_compute_time":0.022674711999716237
+}
+mini_Iris_3{
+    "topo_name":"Iris",
+    "nodes_num":51,
+    "links_num":64,
+    "controller_num":3,
+    "avg_latency":0.5436217141248879,
+    "worst_latency":1.774893661636563,
+    "cc_avg":1.3284685731392682,
+    "cc_worst":1.4351319466947912,
+    "load":2.449489742783178,
+    "avg_compute_time":0.4107689249998657
+}
+mini_Iris_4{
+    "topo_name":"Iris",
+    "nodes_num":51,
+    "links_num":64,
+    "controller_num":4,
+    "avg_latency":0.4451051447851725,
+    "worst_latency":1.334997007370907,
+    "cc_avg":2.320490248711167,
+    "cc_worst":2.396812131422954,
+    "load":4.602988159880492,
+    "avg_compute_time":5.7776316120004045
+}
+mini_Iris_5{
+    "topo_name":"Iris",
+    "nodes_num":51,
+    "links_num":64,
+    "controller_num":5,
+    "avg_latency":0.39042075799761766,
+    "worst_latency":1.334997007370907,
+    "cc_avg":2.7766095209216006,
+    "cc_worst":2.396812131422954,
+    "load":4.166533331199932,
+    "avg_compute_time":66.64337340003112
+}
+mini_Iris_6{
+    "topo_name":"Iris",
+    "nodes_num":51,
+    "links_num":64,
+    "controller_num":6,
+    "avg_latency":0.3680544565226654,
+    "worst_latency":1.334997007370907,
+    "cc_avg":3.1781208280349666,
+    "cc_worst":2.396812131422954,
+    "load":4.232808366400098,
+    "avg_compute_time":492.84856429998763
+}
+mini_Arnes_1{
+    "topo_name":"Arnes",
+    "nodes_num":34,
+    "links_num":47,
+    "controller_num":1,
+    "avg_latency":0.4319898627716886,
+    "worst_latency":0.8183052597281418,
+    "cc_avg":0.0,
+    "cc_worst":0.0,
+    "load":0.0,
+    "avg_compute_time":0.0003496299998369068
+}
+mini_Arnes_2{
+    "topo_name":"Arnes",
+    "nodes_num":34,
+    "links_num":47,
+    "controller_num":2,
+    "avg_latency":0.2618787445828751,
+    "worst_latency":0.4750293775592404,
+    "cc_avg":0.2640776366004694,
+    "cc_worst":0.5281552732009388,
+    "load":1.0,
+    "avg_compute_time":0.00688907100004144
+}
+mini_Arnes_3{
+    "topo_name":"Arnes",
+    "nodes_num":34,
+    "links_num":47,
+    "controller_num":3,
+    "avg_latency":0.19667862184222465,
+    "worst_latency":0.42053945179816066,
+    "cc_avg":0.5537171787483278,
+    "cc_worst":0.8305757681224917,
+    "load":3.39934634239519,
+    "avg_compute_time":0.08256792300031521
+}
+mini_Arnes_4{
+    "topo_name":"Arnes",
+    "nodes_num":34,
+    "links_num":47,
+    "controller_num":4,
+    "avg_latency":0.16768622750769765,
+    "worst_latency":0.42053945179816066,
+    "cc_avg":0.7209461621963513,
+    "cc_worst":0.8305757681224917,
+    "load":1.5,
+    "avg_compute_time":0.7251453420001781
+}
+mini_Arnes_5{
+    "topo_name":"Arnes",
+    "nodes_num":34,
+    "links_num":47,
+    "controller_num":5,
+    "avg_latency":0.15049185040813184,
+    "worst_latency":0.42053945179816066,
+    "cc_avg":0.9348191021607126,
+    "cc_worst":0.8305757681224917,
+    "load":2.925747767665559,
+    "avg_compute_time":4.810501583999721
+}
+mini_Arnes_6{
+    "topo_name":"Arnes",
+    "nodes_num":34,
+    "links_num":47,
+    "controller_num":6,
+    "avg_latency":0.12342258817829588,
+    "worst_latency":0.42053945179816066,
+    "cc_avg":1.3476208366104963,
+    "cc_worst":1.0053375088248542,
+    "load":2.2852182001336816,
+    "avg_compute_time":26.747625499998684
+}
+mini_Bellcanada_1{
+    "topo_name":"Bellcanada",
+    "nodes_num":48,
+    "links_num":64,
+    "controller_num":1,
+    "avg_latency":10.747178904435932,
+    "worst_latency":26.785219734105688,
+    "cc_avg":0.0,
+    "cc_worst":0.0,
+    "load":0.0,
+    "avg_compute_time":0.00069393299985677
+}
+mini_Bellcanada_2{
+    "topo_name":"Bellcanada",
+    "nodes_num":48,
+    "links_num":64,
+    "controller_num":2,
+    "avg_latency":4.482975531979172,
+    "worst_latency":20.52265046724241,
+    "cc_avg":8.468822835312949,
+    "cc_worst":16.937645670625898,
+    "load":0.0,
+    "avg_compute_time":0.01893339800008107
+}
+mini_Bellcanada_3{
+    "topo_name":"Bellcanada",
+    "nodes_num":48,
+    "links_num":64,
+    "controller_num":3,
+    "avg_latency":3.775358489507338,
+    "worst_latency":19.851442220007563,
+    "cc_avg":13.754293512936352,
+    "cc_worst":20.356913939340814,
+    "load":5.656854249492381,
+    "avg_compute_time":0.32667626299953556
+}
+mini_Bellcanada_4{
+    "topo_name":"Bellcanada",
+    "nodes_num":48,
+    "links_num":64,
+    "controller_num":4,
+    "avg_latency":3.2116725573973697,
+    "worst_latency":19.851442220007563,
+    "cc_avg":19.82252477023397,
+    "cc_worst":21.540950762207387,
+    "load":1.4142135623730951,
+    "avg_compute_time":4.326317970999517
+}
+mini_Bellcanada_5{
+    "topo_name":"Bellcanada",
+    "nodes_num":48,
+    "links_num":64,
+    "controller_num":5,
+    "avg_latency":2.99598000574268,
+    "worst_latency":19.851442220007563,
+    "cc_avg":22.98984879546591,
+    "cc_worst":21.540950762207387,
+    "load":3.7202150475476548,
+    "avg_compute_time":41.10726718999795
+}
+mini_Bellcanada_6{
+    "topo_name":"Bellcanada",
+    "nodes_num":48,
+    "links_num":64,
+    "controller_num":6,
+    "avg_latency":2.847404560169213,
+    "worst_latency":19.851442220007563,
+    "cc_avg":26.53602197700405,
+    "cc_worst":21.54095076220738,
+    "load":4.43471156521669,
+    "avg_compute_time":315.29708271999846
+}
+mini_Bics_1{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":1
+    "avg_latency":4.418274769737546
+    "worst_latency":11.285026299119192
+    "cc_avg":0.0
+    "cc_worst":0
+    "load":0.0
+    "avg_compute_time":0.0003290500002913177
+}
+mini_Bics_2{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":2
+    "avg_latency":3.3787377563154073
+    "worst_latency":11.285026299119192
+    "cc_avg":2.065805224406724
+    "cc_worst":4.131610448813448
+    "load":6.5
+    "avg_compute_time":0.006114799999631941
+}
+mini_Bics_3{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":3
+    "avg_latency":2.7416697741285616
+    "worst_latency":9.674372165263629
+    "cc_avg":5.189527553365495
+    "cc_worst":6.513071040731492
+    "load":0.816496580927726
+    "avg_compute_time":0.07038834599952679
+}
+mini_Bics_4{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":4
+    "avg_latency":2.53964772227706
+    "worst_latency":9.674372165263629
+    "cc_avg":6.722390787356607
+    "cc_worst":6.236232217525091
+    "load":1.0897247358851685
+    "avg_compute_time":0.6030904590000864
+}
+mini_Bics_5{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":5
+    "avg_latency":2.3664325650010203
+    "worst_latency":9.674372165263629
+    "cc_avg":8.00938900404638
+    "cc_worst":6.236232217525091
+    "load":2.1540659228538015
+    "avg_compute_time":4.152181720000226
+}
+mini_Bics_6{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":6
+    "avg_latency":2.065510915435869
+    "worst_latency":9.674372165263629
+    "cc_avg":12.567472478896262
+    "cc_worst":9.502418306188455
+    "load":1.8027756377319946
+    "avg_compute_time":23.393790079996688
+}
+mini_Netrail_1{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":1
+    "avg_latency":5.893032568659883
+    "worst_latency":19.827475570403276
+    "cc_avg":0.0
+    "cc_worst":0
+    "load":0.0
+    "avg_compute_time":1.7842999659478666e-05
+}
+mini_Netrail_2{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":2
+    "avg_latency":3.060536058602272
+    "worst_latency":7.556010107954187
+    "cc_avg":9.913737785201638
+    "cc_worst":19.827475570403276
+    "load":2.5
+    "avg_compute_time":6.475600006524474e-05
+}
+mini_Netrail_3{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":3
+    "avg_latency":1.631223510219168
+    "worst_latency":4.946833719339704
+    "cc_avg":14.057239319074213
+    "cc_worst":20.11783157007644
+    "load":0.9428090415820634
+    "avg_compute_time":0.00013001799990888685
+}
+mini_Netrail_4{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":4
+    "avg_latency":0.9245329788849244
+    "worst_latency":4.797376578025696
+    "cc_avg":19.312314803513654
+    "cc_worst":22.284341429864913
+    "load":0.82915619758885
+    "avg_compute_time":0.0001571529998909682
+}
+
+mini_Netrail_5{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":5
+    "avg_latency":0.2391934677383964
+    "worst_latency":1.38399827449561
+    "cc_avg":24.22523221660214
+    "cc_worst":22.284341429864913
+    "load":0.8
+    "avg_compute_time":0.00011453300016000867
+}
+mini_Netrail_6{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":6
+    "avg_latency":0.0414794285247378
+    "worst_latency":0.2903559996731646
+    "cc_avg":27.472393930520834
+    "cc_worst":22.284341429864913
+    "load":0.3726779962499649
+    "avg_compute_time":4.555599996820092e-05
+}
+
+the_Arnes_1{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":1
+    "avg_latency":0.4319898627716886
+    "worst_latency":0.8183052597281418
+    "load":0.0
+    "avg_compute_time":0.0005946760001825169
+}
+the_Arnes_2{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":2
+    "avg_latency":0.4311244421451113
+    "worst_latency":0.8183052597281418
+    "load":15.0
+    "avg_compute_time":0.0009131620003608987
+}
+the_Arnes_3{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":3
+    "avg_latency":0.44816859777818885
+    "worst_latency":1.0100739497143616
+    "load":9.104333522498443
+    "avg_compute_time":0.0026828020001994444
+}
+the_Arnes_4{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":4
+    "avg_latency":0.41266290647422776
+    "worst_latency":0.8183052597281418
+    "load":12.419742348374221
+    "avg_compute_time":0.0010337269998854026
+}
+the_Arnes_5{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":5
+    "avg_latency":0.42517897945215755
+    "worst_latency":1.0031846507601792
+    "load":6.734983296193095
+    "avg_compute_time":0.006841978000593372
+}
+the_Arnes_6{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":6
+    "avg_latency":0.37805525099249715
+    "worst_latency":0.8183052597281418
+    "load":7.824463062870334
+    "avg_compute_time":0.003149161000037566
+}
+the_Bellcanada_1{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":1
+    "avg_latency":10.747178904435932
+    "worst_latency":26.78521973410569
+    "load":0.0
+    "avg_compute_time":0.0009760000003734604
+}
+the_Bellcanada_2{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":2
+    "avg_latency":10.49466580676912
+    "worst_latency":26.78521973410569
+    "load":22.0
+    "avg_compute_time":0.0014309269998921082
+}
+the_Bellcanada_3{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":3
+    "avg_latency":10.42854824472508
+    "worst_latency":26.78521973410569
+    "load":21.213203435596427
+    "avg_compute_time":0.0014350910007487983
+}
+the_Bellcanada_4{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":4
+    "avg_latency":8.912386758250532
+    "worst_latency":34.84309952428841
+    "load":16.20185174601965
+    "avg_compute_time":0.003947973999893293
+}
+the_Bellcanada_5{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":5
+    "avg_latency":8.379310181687641
+    "worst_latency":24.45077107550512
+    "load":14.277254638059796
+    "avg_compute_time":0.004465258999844081
+}
+the_Bellcanada_6{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":6
+    "avg_latency":9.171995189940999
+    "worst_latency":24.45077107550512
+    "load":15.652475842498529
+    "avg_compute_time":0.0017408830003114418
+}
+the_Bics_1{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":1
+    "avg_latency":4.418274769737546
+    "worst_latency":11.285026299119192
+    "load":0.0
+    "avg_compute_time":0.000555247999727726
+}
+the_Bics_2{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":2
+    "avg_latency":4.2344173213520975
+    "worst_latency":11.285026299119192
+    "load":14.5
+    "avg_compute_time":0.0008310390001861379
+}
+the_Bics_3{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":3
+    "avg_latency":4.400278841433261
+    "worst_latency":11.458192559458997
+    "load":11.313708498984761
+    "avg_compute_time":0.0017450510000344365
+}
+the_Bics_4{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":4
+    "avg_latency":4.225974976251513
+    "worst_latency":11.285026299119192
+    "load":11.986972094736853
+    "avg_compute_time":0.001129589000483975
+}
+the_Bics_5{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":5
+    "avg_latency":4.27915678198972
+    "worst_latency":11.458192559458997
+    "load":7.391887445030531
+    "avg_compute_time":0.003908819999196567
+}
+the_Bics_6{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":6
+    "avg_latency":3.8480856708074116
+    "worst_latency":11.458192559458997
+    "load":5.852349955359813
+    "avg_compute_time":0.0059797340002842245
+}
+the_Iris_1{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":1
+    "avg_latency":1.1073704861626805
+    "worst_latency":2.2982414806721145
+    "load":0.0
+    "avg_compute_time":0.0011049310001544654
+}
+the_Iris_2{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":2
+    "avg_latency":1.0868470422789336
+    "worst_latency":2.2982414806721145
+    "load":23.5
+    "avg_compute_time":0.0015709890006110072
+}
+the_Iris_3{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":3
+    "avg_latency":1.0167073212376632
+    "worst_latency":2.8312249413758592
+    "load":16.391054470858997
+    "avg_compute_time":0.006584855000837706
+}
+the_Iris_4{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":4
+    "avg_latency":1.0596185930414372
+    "worst_latency":2.2982414806721145
+    "load":19.778460506318485
+    "avg_compute_time":0.001976161999627948
+}
+the_Iris_5{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":5
+    "avg_latency":0.9237824199169001
+    "worst_latency":2.8312249413758592
+    "load":13.555810562264433
+    "avg_compute_time":0.013179679999593645
+}
+the_Iris_6{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":6
+    "avg_latency":0.8907669940856282
+    "worst_latency":2.0088033362193523
+    "load":12.189476335484365
+    "avg_compute_time":0.008936529000056908
+}
+the_Netrail_1{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":1
+    "avg_latency":5.893032568659883
+    "worst_latency":19.827475570403276
+    "load":0.0
+    "avg_compute_time":0.00010709599999245256
+}
+the_Netrail_2{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":2
+    "avg_latency":3.060536058602272
+    "worst_latency":7.556010107954187
+    "load":2.5
+    "avg_compute_time":0.00016076200001407414
+}
+the_Netrail_3{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":3
+    "avg_latency":1.9914077688766127
+    "worst_latency":7.556010107954187
+    "load":1.8856180831641267
+    "avg_compute_time":0.00016819999960716815
+}
+the_Netrail_4{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":4
+    "avg_latency":2.0243189963304604
+    "worst_latency":4.946833719339704
+    "load":1.299038105676658
+    "avg_compute_time":0.00017916299984790384
+}
+the_Netrail_5{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":5
+    "avg_latency":1.3804589137086702
+    "worst_latency":4.946833719339704
+    "load":0.8
+    "avg_compute_time":0.00019751099986024202
+}
+the_Netrail_6{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":6
+    "avg_latency":0.6737683823744269
+    "worst_latency":4.716378676620988
+    "load":0.3726779962499649
+    "avg_compute_time":0.00016748699999880046
+}
+mopso_Arnes_1{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":1
+    "avg_latency":0.4319898627716887
+    "worst_latency":0.8183052597281418
+    "load":0.0
+    "avg_compute_time":0.9734092660003807
+}
+mopso_Arnes_2{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":2
+    "avg_latency":0.2562099834869085
+    "worst_latency":0.6113605332617761
+    "load":1.0
+    "avg_compute_time":0.7475481600034982
+}
+mopso_Arnes_3{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":3
+    "avg_latency":0.19667862184222468
+    "worst_latency":0.5448986412090531
+    "load":3.39934634239519
+    "avg_compute_time":0.7501132300007157
+}
+mopso_Arnes_4{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":4
+    "avg_latency":0.16452448874123582
+    "worst_latency":0.7448509162950214
+    "load":0.5
+    "avg_compute_time":0.8447227700031362
+}
+mopso_Arnes_5{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":5
+    "avg_latency":0.13227323390516085
+    "worst_latency":0.5737223635763712
+    "load":1.7204650534085253
+    "avg_compute_time":0.811116700002458
+}
+mopso_Arnes_6{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":6
+    "avg_latency":0.1397940982501924
+    "worst_latency":0.4723212416114214
+    "load":0.7453559924999298
+    "avg_compute_time":0.8189168899960351
+}
+mopso_Bellcanada_1{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":1
+    "avg_latency":14.981547812647781
+    "worst_latency":25.66748969431455
+    "load":0.0
+    "avg_compute_time":1.0098321909998775
+}
+mopso_Bellcanada_2{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":2
+    "avg_latency":4.4618386706046556
+    "worst_latency":25.66748969431455
+    "load":0.0
+    "avg_compute_time":0.7993108260002919
+}
+mopso_Bellcanada_3{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":3
+    "avg_latency":3.7936098859681664
+    "worst_latency":19.851442220007563
+    "load":5.656854249492381
+    "avg_compute_time":1.0654807069996606
+}
+mopso_Bellcanada_4{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":4
+    "avg_latency":4.478965678704465
+    "worst_latency":20.321690876444933
+    "load":7.280109889280518
+    "avg_compute_time":1.0255608359997859
+}
+mopso_Bellcanada_5{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":5
+    "avg_latency":3.3558178923830853
+    "worst_latency":19.851442220007563
+    "load":1.8547236990991407
+    "avg_compute_time":1.0794991269998717
+}mopso_Bellcanada_6{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":6
+    "avg_latency":2.8500462960612563
+    "worst_latency":20.321690876444933
+    "load":3.7416573867739413
+    "avg_compute_time":1.0357395319995704
+}
+mopso_Bics_1{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":1
+    "avg_latency":5.48925072866305
+    "worst_latency":18.682822836596007
+    "load":0.0
+    "avg_compute_time":0.7452324770000996
+}
+mopso_Bics_2{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":2
+    "avg_latency":3.4027787538190366
+    "worst_latency":12.838032175377354
+    "load":4.5
+    "avg_compute_time":0.7221573200001149
+}
+mopso_Bics_3{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":3
+    "avg_latency":2.7416697741285625
+    "worst_latency":11.244634424407735
+    "load":0.816496580927726
+    "avg_compute_time":0.6819634239998413
+}
+mopso_Bics_4{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":4
+    "avg_latency":2.8030493293828025
+    "worst_latency":10.152081909209766
+    "load":2.48746859276655
+    "avg_compute_time":0.948419472000096
+}
+mopso_Bics_5{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":5
+    "avg_latency":2.128595707603361
+    "worst_latency":11.874623355670655
+    "load":3.6110940170535577
+    "avg_compute_time":0.832965239000041
+}
+mopso_Bics_6{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":6
+    "avg_latency":2.4258878138443367
+    "worst_latency":10.152081909209766
+    "load":2.4324199198877374
+    "avg_compute_time":0.8913332019996596
+}
+mopso_Iris_1{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":1
+    "avg_latency":1.1073704861626803
+    "worst_latency":3.9106275311512984
+    "load":0.0
+    "avg_compute_time":1.0749187590001383
+}
+mopso_Iris_2{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":2
+    "avg_latency":0.7891002399454229
+    "worst_latency":2.037576282818312
+    "load":0.5
+    "avg_compute_time":0.7991055750002851
+}
+mopso_Iris_3{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":3
+    "avg_latency":0.736633436881836
+    "worst_latency":1.7728941291442124
+    "load":0.0
+    "avg_compute_time":0.8348027900001034
+}
+mopso_Iris_4{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":4
+    "avg_latency":0.45400288126179206
+    "worst_latency":1.7728941291442124
+    "load":4.602988159880492
+    "avg_compute_time":1.0147993839997798
+}
+mopso_Iris_5{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":5
+    "avg_latency":0.404073546843964
+    "worst_latency":1.5160572060914603
+    "load":3.919183588453085
+    "avg_compute_time":0.9488611640001181
+}
+mopso_Iris_6{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":6
+    "avg_latency":0.42896887638374503
+    "worst_latency":1.0798148516081396
+    "load":0.5
+    "avg_compute_time":0.9775876810000045
+}
+mopso_Netrail_1{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":1
+    "avg_latency":5.936480190501095
+    "worst_latency":20.11783157007644
+    "load":0.0
+    "avg_compute_time":1.3516007570002693
+}
+mopso_Netrail_2{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":2
+    "avg_latency":3.062504251918746
+    "worst_latency":20.11783157007644
+    "load":2.5
+    "avg_compute_time":0.9464197719999357
+}
+mopso_Netrail_3{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":3
+    "avg_latency":1.631223510219168
+    "worst_latency":4.946833719339704
+    "load":0.9428090415820634
+    "avg_compute_time":1.1108076199999777
+}
+mopso_Netrail_4{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":4
+    "avg_latency":0.9119777534545861
+    "worst_latency":19.827475570403276
+    "load":1.299038105676658
+    "avg_compute_time":1.1548475150001467
+}
+mopso_Netrail_5{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":5
+    "avg_latency":0.7268189396712658
+    "worst_latency":1.6674655975611148
+    "load":0.4898979485566356
+    "avg_compute_time":1.3187321520003024
+}
+mopso_Netrail_6{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":6
+    "avg_latency":0.0414794285247378
+    "worst_latency":0.2903559996731646
+    "load":0.3726779962499649
+    "avg_compute_time":1.4006676080002216
+}
+sa_Arnes_1{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":1
+    "avg_latency":0.4319898627716887
+    "worst_latency":1.217172157906443
+    "load":0.0
+    "avg_compute_time":0.037340882000280545
+}
+sa_Arnes_2{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":2
+    "avg_latency":0.27707628651403965
+    "worst_latency":0.5693488970444789
+    "load":0.0
+    "avg_compute_time":0.03923237400013022
+}
+sa_Arnes_3{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":3
+    "avg_latency":0.23241001799731953
+    "worst_latency":0.6974479513124681
+    "load":0.4714045207910317
+    "avg_compute_time":0.03977106200007256
+}
+sa_Arnes_4{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":4
+    "avg_latency":0.16517817573922414
+    "worst_latency":0.5415940298295858
+    "load":0.5
+    "avg_compute_time":0.043013669999782
+}
+sa_Arnes_5{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":5
+    "avg_latency":0.17888931657414964
+    "worst_latency":0.6923449807142603
+    "load":0.9797958971132712
+    "avg_compute_time":0.04483221000002231
+}
+sa_Arnes_6{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":6
+    "avg_latency":0.14784136168325904
+    "worst_latency":0.5469617742459241
+    "load":0.9428090415820634
+    "avg_compute_time":0.04675529000000097
+}
+sa_Bellcanada_1{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":1
+    "avg_latency":10.747178904435936
+    "worst_latency":34.69288716422021
+    "load":0.0
+    "avg_compute_time":0.04390729100035969
+}
+sa_Bellcanada_2{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":2
+    "avg_latency":4.4618386706046556
+    "worst_latency":19.851442220007563
+    "load":0.0
+    "avg_compute_time":0.04644915200013202
+}
+sa_Bellcanada_3{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":3
+    "avg_latency":4.68953072634451
+    "worst_latency":18.762329090127846
+    "load":3.559026084010437
+    "avg_compute_time":0.04993935599981342
+}
+sa_Bellcanada_4{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":4
+    "avg_latency":3.251735473806526
+    "worst_latency":19.851442220007563
+    "load":0.0
+    "avg_compute_time":0.051945346999564206
+}
+sa_Bellcanada_5{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":5
+    "avg_latency":2.9583700721935826
+    "worst_latency":19.851442220007563
+    "load":2.0591260281974
+    "avg_compute_time":0.05357504900021013
+}
+sa_Bellcanada_6{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":6
+    "avg_latency":2.94695566892108
+    "worst_latency":20.52265046724241
+    "load":0.5773502691896257
+    "avg_compute_time":0.05922187100048177
+}
+sa_Bics_1{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":1
+    "avg_latency":4.418274769737546
+    "worst_latency":13.361773492231707
+    "load":0.0
+    "avg_compute_time":0.03670425200019963
+}
+sa_Bics_2{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":2
+    "avg_latency":4.117136714971808
+    "worst_latency":13.190405309059239
+    "load":0.5
+    "avg_compute_time":0.03821715000027325
+}
+sa_Bics_3{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":3
+    "avg_latency":3.2598106284169486
+    "worst_latency":10.624337813396064
+    "load":0.0
+    "avg_compute_time":0.03994946099992376
+}
+sa_Bics_4{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":4
+    "avg_latency":2.8328897755421325
+    "worst_latency":9.674372165263629
+    "load":0.4330127018922193
+    "avg_compute_time":0.04134247099980712
+}
+sa_Bics_5{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":5
+    "avg_latency":2.5928364682262344
+    "worst_latency":8.048411378267556
+    "load":0.7999999999999999
+    "avg_compute_time":0.043237095000222325
+}
+sa_Bics_6{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":6
+    "avg_latency":2.295625711250696
+    "worst_latency":8.676541344968609
+    "load":1.118033988749895
+    "avg_compute_time":0.04585958699986804
+}
+sa_Iris_1{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":1
+    "avg_latency":1.1073704861626803
+    "worst_latency":3.2763145219319845
+    "load":0.0
+    "avg_compute_time":0.045981679999968036
+}
+sa_Iris_2{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":2
+    "avg_latency":0.8014881917568181
+    "worst_latency":2.8234373288746575
+    "load":0.5
+    "avg_compute_time":0.047918535000062545
+}
+sa_Iris_3{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":3
+    "avg_latency":0.640994268531352
+    "worst_latency":2.019510559748388
+    "load":0.0
+    "avg_compute_time":0.05081455400038976
+}
+sa_Iris_4{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":4
+    "avg_latency":0.6261828269813964
+    "worst_latency":1.3488110802341373
+    "load":0.4330127018922193
+    "avg_compute_time":0.05464077799988445
+}
+sa_Iris_5{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":5
+    "avg_latency":0.5641080403318511
+    "worst_latency":1.774893661636563
+    "load":0.7483314773547882
+    "avg_compute_time":0.056743893999955615
+}
+sa_Iris_6{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":6
+    "avg_latency":0.5583339792025994
+    "worst_latency":1.5517114600419675
+    "load":1.6072751268321592
+    "avg_compute_time":0.05931074900028761
+}
+sa_Netrail_1{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":1
+    "avg_latency":5.893032568659883
+    "worst_latency":17.33750771052521
+    "load":0.0
+    "avg_compute_time":0.021870328000513837
+}
+sa_Netrail_2{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":2
+    "avg_latency":4.1080103260084835
+    "worst_latency":17.33750771052521
+    "load":0.5
+    "avg_compute_time":0.023453995999880135
+}
+sa_Netrail_3{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":3
+    "avg_latency":1.631223510219168
+    "worst_latency":17.33750771052521
+    "load":0.9428090415820634
+    "avg_compute_time":0.022562384000048043
+}
+sa_Netrail_4{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":4
+    "avg_latency":0.9245329788849244
+    "worst_latency":4.797376578025696
+    "load":0.82915619758885
+    "avg_compute_time":0.024082093000179158
+}
+sa_Netrail_5{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":5
+    "avg_latency":0.2391934677383964
+    "worst_latency":17.33750771052521
+    "load":0.8
+    "avg_compute_time":0.023405058999778704
+}
+sa_Netrail_6{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":6
+    "avg_latency":0.0414794285247378
+    "worst_latency":4.946833719339704
+    "load":0.3726779962499649
+    "avg_compute_time":0.02369737199973315
+}
+nsgaii_Arnes_2{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":2
+    "avg_latency":0.27707628651403965
+    "worst_latency":0.4690024980699192
+    "load":0.0
+    "avg_compute_time":0.2861041839997051
+}
+nsgaii_Arnes_3{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":3
+    "avg_latency":0.23505990758787793
+    "worst_latency":0.613059218834019
+    "load":0.4714045207910317
+    "avg_compute_time":0.3114680420001969
+}
+nsgaii_Arnes_4{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":4
+    "avg_latency":0.16517817573922414
+    "worst_latency":0.5415940298295858
+    "load":0.5
+    "avg_compute_time":0.3101230429997668
+}
+nsgaii_Arnes_5{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":5
+    "avg_latency":0.195533815800932
+    "worst_latency":0.4788761196120282
+    "load":0.39999999999999997
+    "avg_compute_time":0.32633801199961454
+}
+nsgaii_Arnes_6{
+    "toponame":"Arnes"
+    "nodes_num":34
+    "links_num":47
+    "controller_num":6
+    "avg_latency":0.1397940982501924
+    "worst_latency":0.42053945179816066
+    "load":0.7453559924999298
+    "avg_compute_time":0.38667705199972263
+}
+nsgaii_Bellcanada_2{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":2
+    "avg_latency":4.4618386706046556
+    "worst_latency":20.52265046724241
+    "load":0.0
+    "avg_compute_time":0.33882397099980155
+}
+nsgaii_Bellcanada_3{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":3
+    "avg_latency":4.607762644240748
+    "worst_latency":20.8247948316419
+    "load":3.559026084010437
+    "avg_compute_time":0.49023892000026537
+}
+nsgaii_Bellcanada_4{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":4
+    "avg_latency":3.251735473806526
+    "worst_latency":19.851442220007563
+    "load":0.0
+    "avg_compute_time":0.4244549160002498
+}
+nsgaii_Bellcanada_5{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":5
+    "avg_latency":2.9583700721935826
+    "worst_latency":19.851442220007563
+    "load":2.0591260281974
+    "avg_compute_time":0.47022081099974455
+}
+nsgaii_Bellcanada_6{
+    "toponame":"Bellcanada"
+    "nodes_num":48
+    "links_num":64
+    "controller_num":6
+    "avg_latency":2.822846075614193
+    "worst_latency":20.52265046724241
+    "load":0.5773502691896257
+    "avg_compute_time":0.5087196560000302
+}
+nsgaii_Bics_2{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":2
+    "avg_latency":3.710274397480091
+    "worst_latency":9.860242019797278
+    "load":0.5
+    "avg_compute_time":0.29337803600006734
+}
+nsgaii_Bics_3{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":3
+    "avg_latency":2.7416697741285625
+    "worst_latency":9.674372165263629
+    "load":0.816496580927726
+    "avg_compute_time":0.2967752530000871
+}
+nsgaii_Bics_4{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":4
+    "avg_latency":2.8328897755421325
+    "worst_latency":9.674372165263629
+    "load":0.4330127018922193
+    "avg_compute_time":0.4022896669997135
+}
+nsgaii_Bics_5{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":5
+    "avg_latency":2.7803999333082112
+    "worst_latency":9.793441260370397
+    "load":0.4898979485566356
+    "avg_compute_time":0.3963890869996976
+}
+nsgaii_Bics_6{
+    "toponame":"Bics"
+    "nodes_num":33
+    "links_num":48
+    "controller_num":6
+    "avg_latency":2.147325366893994
+    "worst_latency":9.860242019797278
+    "load":0.7637626158259734
+    "avg_compute_time":0.4079719359998126
+}
+nsgaii_Iris_2{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":2
+    "avg_latency":0.7891002399454229
+    "worst_latency":1.966152495592072
+    "load":0.5
+    "avg_compute_time":0.3387693919998128
+}
+nsgaii_Iris_3{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":3
+    "avg_latency":0.6173346060771571
+    "worst_latency":2.116848934677758
+    "load":0.0
+    "avg_compute_time":0.35734399800014216
+}
+nsgaii_Iris_4{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":4
+    "avg_latency":0.5604451442026628
+    "worst_latency":1.818613537800792
+    "load":0.82915619758885
+    "avg_compute_time":0.3748576609999873
+}
+nsgaii_Iris_5{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":5
+    "avg_latency":0.5006780169625228
+    "worst_latency":1.2296853776857477
+    "load":0.7483314773547882
+    "avg_compute_time":0.4796539289999055
+}
+nsgaii_Iris_6{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":6
+    "avg_latency":0.42896887638374503
+    "worst_latency":1.0798148516081396
+    "load":0.5
+    "avg_compute_time":0.44313580900023225
+}
+nsgaii_Netrail_2{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":2
+    "avg_latency":4.1080103260084835
+    "worst_latency":17.33750771052521
+    "load":0.5
+    "avg_compute_time":0.207742957000155
+}
+nsgaii_Netrail_3{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":3
+    "avg_latency":1.631223510219168
+    "worst_latency":4.946833719339704
+    "load":0.9428090415820634
+    "avg_compute_time":0.2001971369999228
+}
+nsgaii_Netrail_4{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":4
+    "avg_latency":0.9245329788849244
+    "worst_latency":4.797376578025696
+    "load":0.82915619758885
+    "avg_compute_time":0.2104009829997085
+}
+nsgaii_Netrail_5{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":5
+    "avg_latency":0.2391934677383964
+    "worst_latency":1.38399827449561
+    "load":0.8
+    "avg_compute_time":0.2044826210004976
+}
+nsgaii_Netrail_6{
+    "toponame":"Netrail"
+    "nodes_num":7
+    "links_num":10
+    "controller_num":6
+    "avg_latency":0.0414794285247378
+    "worst_latency":0.2903559996731646
+    "load":0.3726779962499649
+    "avg_compute_time":0.2224364149995381
+}

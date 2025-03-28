@@ -29,7 +29,7 @@ def distance_compute(lat1, lon1, lat2, lon2):
     return distance
 
 
-def matrix_gen(file_path,infinit,v):
+def distance_matrix_gen(file_path,infinit):
     """
     将文本文件解析为距离矩阵，其中两点之间的距离使用 distance_compute 函数计算。
 
@@ -76,7 +76,7 @@ def matrix_gen(file_path,infinit,v):
     dis_matrix = [[infinit for _ in range(n)] for _ in range(n)]
     # 填入初始数值
     for i in range(en):
-        dis_matrix[edges[i][0]][edges[i][1]] = (distance_compute(node_positions[edges[i][0]][0],node_positions[edges[i][0]][1],node_positions[edges[i][1]][0],node_positions[edges[i][1]][1]))/v * 1000
+        dis_matrix[edges[i][0]][edges[i][1]] = (distance_compute(node_positions[edges[i][0]][0],node_positions[edges[i][0]][1],node_positions[edges[i][1]][0],node_positions[edges[i][1]][1]))
         dis_matrix[edges[i][1]][edges[i][0]] = dis_matrix[edges[i][0]][edges[i][1]]
     # 接下来计算每条边的最短路径
     for z in range(n):
@@ -85,7 +85,25 @@ def matrix_gen(file_path,infinit,v):
                 if x == y:
                     dis_matrix[x][y] = 0.0
                 dis_matrix[x][y] = min(dis_matrix[x][y],dis_matrix[x][z]+dis_matrix[z][y])
-    return dis_matrix
+    return dis_matrix,n,en
+
+def delay_matrix_gen(dis_matrix, infinite):
+    """
+        将距离转换成延迟，参考了GitHub上的转换代码，考虑将非真空条件下的光速设置为
+        c=1.97 * 10**8 m/s
+        t = distance / speed of light
+        t (in ms) = ( distance in km * 1000 (for meters) ) / ( speed of light / 1000 (for ms))
+
+        参数:
+        - dis_matrix: 存储节点间距离的矩阵。
+
+        返回值:
+        - 延迟矩阵
+    """
+    c=1.97 * 10**8
+    delay_matrix = [[element*1000/(c/1000) if element != infinite else element for element in row] for row in dis_matrix]
+    return delay_matrix
+
 # 测试函数
 if __name__ == "__main__":
     # 假设输入文件是 "nodes.txt"
@@ -99,8 +117,8 @@ if __name__ == "__main__":
     # Iris 51节点，64条边
     file_path = "Bics.txt"
     c = 3 * 10 ** 5
-    v = (c * 2) / 3
-    matrix = matrix_gen(file_path,infinite,v)
+    v = 1.97 * 10 ** 5
+    matrix = distance_matrix_gen(file_path,infinite)
     print(matrix)
     for row in matrix:
         print(row)

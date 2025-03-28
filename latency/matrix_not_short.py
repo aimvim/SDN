@@ -80,13 +80,15 @@ def distance_matrix_gen(file_path, infinit):
     for i in range(en):
         dis_matrix[edges[i][0]][edges[i][1]] = distance_compute(node_positions[edges[i][0]][0],node_positions[edges[i][0]][1],node_positions[edges[i][1]][0],node_positions[edges[i][1]][1])
         dis_matrix[edges[i][1]][edges[i][0]] = dis_matrix[edges[i][0]][edges[i][1]]
+    print(dis_matrix)
     # 接下来计算每条边的最短路径
-    for x in range(n):
-        for y in range(n):
-            for z in range(n):
-                if x == y:
-                    dis_matrix[x][y] = 0.0
-                dis_matrix[x][y] = min(dis_matrix[x][y],dis_matrix[x][z]+dis_matrix[z][y])
+    # for z in range(n):
+    #     for x in range(n):
+    #         for y in range(n):
+    #             if x == y:
+    #                 dis_matrix[x][y] = 0.0
+    #             dis_matrix[x][y] = min(dis_matrix[x][y],dis_matrix[x][z]+dis_matrix[z][y])
+    # print(dis_matrix)
     return dis_matrix,n,en
 
 def delay_matrix_gen(dis_matrix, infinite):
@@ -107,17 +109,17 @@ def delay_matrix_gen(dis_matrix, infinite):
     return delay_matrix
 
 # 测试函数
-if __name__ == "__main__":
-    # 假设输入文件是 "nodes.txt"
-    infinite = 99999
-    # Ntt 47个节点，216条边(有一大堆边重合),先别用
-    # 下面几个也是有重合边的，说实话我不知道这个怎么去处理，写算法吧
-    # Bics 33节点， 48条边
-    # Arnes 34节点，47条边
-    # Ntelos 48节点，61条边
-    # Bellcanada 48节点 64条边
-    # Iris 51节点，64条边
-    file_path = "Iris.txt"
-    matrix = distance_matrix_gen(file_path,infinite)
-    for row in matrix:
-        print(row)
+# if __name__ == "__main__":
+#     # 假设输入文件是 "nodes.txt"
+#     infinite = 9999
+#     # Ntt 47个节点，216条边(有一大堆边重合),先别用
+#     # 下面几个也是有重合边的，说实话我不知道这个怎么去处理，写算法吧
+#     # Bics 33节点， 48条边
+#     # Arnes 34节点，47条边
+#     # Ntelos 48节点，61条边
+#     # Bellcanada 48节点 64条边
+#     # Iris 51节点，64条边
+#     file_path = "Iris.txt"
+#     matrix = distance_matrix_gen(file_path,infinite)
+#     for row in matrix:
+#         print(row)
