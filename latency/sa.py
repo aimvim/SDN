@@ -9,10 +9,10 @@ import matrix as ma
 
 # ====================== 输入参数初始化 ======================
 #num_switches = 50  # 交换机数量
-num_controllers = 6  # 控制器数量
+num_controllers = 4  # 控制器数量
 failure_prob_per_unit = 0.01  # 单位距离故障概率
 infinit = 99999
-toponame = "Netrail.txt"
+toponame = "Iris.txt"
 test_num = 100
 
 distance_matrix, num_switches, num_links = mas.distance_matrix_gen(toponame, infinit)
@@ -73,7 +73,7 @@ def calculate_score(solution, weights):
 def simulated_annealing():
     # 超参数
     initial_temp = 1000
-    cooling_rate = 0.95
+    cooling_rate = 0.99
     max_iterations = 1000
     weights = [0.4, 0.3, 0.3]  # 时延、负载、稳定性权重
 
@@ -138,7 +138,7 @@ def save_results_to_file_sa(filename, toponame, nodes_num, links_num, controller
 best_solution, best_score, (avg_delay, load_std, survival),worst_delay = simulated_annealing()
 
 #估算运行时间
-run_time = timeit.timeit(simulated_annealing,number=test_num)/test_num
+#run_time = timeit.timeit(simulated_annealing,number=test_num)/test_num
 
 # 输出结果
 print("最优控制器位置:", sorted(best_solution))
@@ -146,5 +146,5 @@ print(f"综合评分: {best_score}")
 print(f"平均时延: {avg_delay}")
 print(f"负载标准差: {load_std}")
 print(f"平均存活概率: {survival}")
-save_results_to_file_sa("..\\test_data.txt",toponame,num_switches,num_links,num_controllers,
-                        avg_delay,worst_delay,load_std,run_time)
+# save_results_to_file_sa("..\\test_data.txt",toponame,num_switches,num_links,num_controllers,
+#                         avg_delay,worst_delay,load_std,run_time)
