@@ -12,7 +12,7 @@ import matrix as ma
 num_controllers = 4  # 控制器数量
 failure_prob_per_unit = 0.01  # 单位距离故障概率
 infinit = 99999
-toponame = "Iris.txt"
+toponame = "Netrail.txt"
 test_num = 100
 
 distance_matrix, num_switches, num_links = mas.distance_matrix_gen(toponame, infinit)
@@ -72,10 +72,10 @@ def calculate_score(solution, weights):
 # ====================== 模拟退火算法 ======================
 def simulated_annealing():
     # 超参数
-    initial_temp = 1000
+    initial_temp = 10000
     cooling_rate = 0.99
     max_iterations = 1000
-    weights = [0.4, 0.3, 0.3]  # 时延、负载、稳定性权重
+    weights = [0.5, 0.5, 0]  # 时延、负载、稳定性权重
 
     # 生成初始解
     current_solution = random.sample(range(num_switches), num_controllers)
