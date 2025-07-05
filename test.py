@@ -65,5 +65,5 @@ def automated_test_the(topologies, controller_counts, test_num, output_file="tex
 if __name__ == "__main__":
     #实现了自动化测试，只要修改下面的值就行
     topologies = ["Iris.txt"]
-    contoller_num = [1,2,3,4,5,6]
-    automated_test_mini(topologies,contoller_num,100)
+    contoller_num = [6]
+    automated_test_mini(topologies,contoller_num,1)

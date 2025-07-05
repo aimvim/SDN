@@ -1,5 +1,7 @@
 import math
 import re
+import itertools
+
 
 def distance_compute(lat1, lon1, lat2, lon2):
     """  
@@ -103,6 +105,91 @@ def delay_matrix_gen(dis_matrix, infinite):
     c=1.97 * 10**8
     delay_matrix = [[element*1000/(c/1000) if element != infinite else element for element in row] for row in dis_matrix]
     return delay_matrix
+
+
+def compute_failed_link(k,distance_matrix,edges,infinit):
+    '''
+    遍历了k条失效链路的所有情况算出平均时延
+    :param k:链路失效数
+    :param distance_matrix:未最短路径的距离矩阵
+    :param edges: 存边信息的列表
+    :param infinit: 无穷
+    :return: 一个k链路失效下所有组合的平均时延列表
+    '''
+
+    n = len(distance_matrix)
+    fail_avg_delays = []
+    all_possible_failures = list(itertools.combinations(edges, k))
+    for failed_edges in all_possible_failures:
+        # 创建一个距离矩阵的副本，用于当前失效情况
+        current_dis_matrix = [row[:] for row in distance_matrix]
+
+        # 设置失效链路的距离为无穷大
+        for edge in failed_edges:
+            current_dis_matrix[edge[0]][edge[1]] = infinit
+            current_dis_matrix[edge[1]][edge[0]] = infinit
+
+        # 重新计算最短路径
+        for z in range(n):
+            for x in range(n):
+                for y in range(n):
+                    if x == y:
+                        current_dis_matrix[x][y] = 0.0
+                    current_dis_matrix[x][y] = min(current_dis_matrix[x][y],
+                                                   current_dis_matrix[x][z] + current_dis_matrix[z][y])
+
+        #计算该情况下的平均时延
+        delay_matrix = delay_matrix_gen(distance_matrix,infinit)
+        sum_delay = 0
+        for i in range(n):
+            for j in range(i + 1, n):  # 只遍历 i < j 的位置
+                if delay_matrix[i][j] != infinit:
+                    sum_delay += delay_matrix[i][j]
+        fail_avg_delays.append(sum_delay/n)
+
+
+    return fail_avg_delays
+
+
+def compute_connectivity_matrix(adj_matrix):
+    n = len(adj_matrix)
+    # 初始化连通矩阵，初始时如果两个节点之间有边，则为1，否则为0
+    connectivity_matrix = [[1 if adj_matrix[i][j] == 1 else 0 for j in range(n)] for i in range(n)]
+
+    # Floyd-Warshall 算法的核心部分
+    for k in range(n):
+        for i in range(n):
+            for j in range(n):
+                # 如果 i 到 k 和 k 到 j 都连通，则 i 到 j 也连通
+                connectivity_matrix[i][j] = connectivity_matrix[i][j] or (
+                            connectivity_matrix[i][k] and connectivity_matrix[k][j])
+
+    return connectivity_matrix
+
+
+def compute_ncpr(adj_matrix, controller_place):
+    """
+    计算网络的连通性比例（NCPR）。
+
+    参数:
+    - adj_matrix: 邻接矩阵
+    - controller_place: 控制器的位置列表
+
+    返回:
+    - NCPR: 网络的连通性比例
+    """
+    n = len(adj_matrix)
+    con_matrix = compute_connectivity_matrix(adj_matrix)
+    connected_switches = 0
+
+    for i in range(n):
+        # 检查当前节点是否能连接到所有控制器
+        if all(con_matrix[i][j] for j in controller_place):
+            connected_switches += 1
+
+    ncpr = connected_switches / n
+    return ncpr
+
 
 # 测试函数
 if __name__ == "__main__":

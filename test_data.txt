@@ -1509,3 +1509,89 @@ nsgaii_Netrail_6{
     "load":0.3726779962499649
     "avg_compute_time":0.2224364149995381
 }
+
+mini_Iris_2{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":2
+    "avg_latency":0.7891002399454227
+    "worst_latency":1.966152495592072
+    "cc_avg":0.9138656135200671
+    "cc_worst":1.8277312270401342
+    "load":0.5
+    "avg_compute_time":0.051177600000000045
+}
+mini_Iris_3{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":3
+    "avg_latency":0.6173346060771571
+    "worst_latency":2.116848934677758
+    "cc_avg":1.6771455543137674
+    "cc_worst":1.7775461186827102
+    "load":0.0
+    "avg_compute_time":0.8954654
+}
+mini_Iris_4{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":4
+    "avg_latency":0.6173550514830906
+    "worst_latency":1.6167885404167364
+    "cc_avg":2.5815042939657693
+    "cc_worst":2.436430794612772
+    "load":0.4330127018922193
+    "avg_compute_time":11.861948599999998
+}
+mini_Iris_5{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":5
+    "avg_latency":0.5386654366915417
+    "worst_latency":1.3522933065306417
+    "cc_avg":2.9592464980270337
+    "cc_worst":2.4594703992898888
+    "load":0.39999999999999997
+    "avg_compute_time":119.16573020000001
+}
+mini_Iris_6{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":6
+    "avg_latency":0.4289688763837451
+    "worst_latency":1.0798148516081396
+    "cc_avg":3.530525260143421
+    "cc_worst":2.3327108088889927
+    "load":0.5
+    "avg_compute_time":1043.0473864
+}
+
+mini_Iris_5{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":5
+    "avg_latency":0.5386654366915417
+    "worst_latency":1.3522933065306417
+    "cc_avg":2.9592464980270337
+    "cc_worst":2.4594703992898888
+    "load":0.39999999999999997
+    "avg_compute_time":118.72201550000003
+}
+mini_Iris_6{
+    "toponame":"Iris"
+    "nodes_num":51
+    "links_num":64
+    "controller_num":6
+    "avg_latency":0.4289688763837451
+    "worst_latency":1.0798148516081396
+    "cc_avg":3.530525260143421
+    "cc_worst":2.3327108088889927
+    "load":0.5
+    "avg_compute_time":1516.2222262
+}

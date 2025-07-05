@@ -76,10 +76,13 @@ def distance_matrix_gen(file_path, infinit):
     #print(edges)
     # 构造初始矩阵
     dis_matrix = [[infinit for _ in range(n)] for _ in range(n)]
+    W = [[0 for _ in range(n)] for _ in range(n)]
     # 填入初始数值
     for i in range(en):
         dis_matrix[edges[i][0]][edges[i][1]] = distance_compute(node_positions[edges[i][0]][0],node_positions[edges[i][0]][1],node_positions[edges[i][1]][0],node_positions[edges[i][1]][1])
         dis_matrix[edges[i][1]][edges[i][0]] = dis_matrix[edges[i][0]][edges[i][1]]
+        W[edges[i][0]][edges[i][1]] = 1
+        W[edges[i][1]][edges[i][0]] = 1
     print(dis_matrix)
     # 接下来计算每条边的最短路径
     # for z in range(n):
@@ -89,7 +92,7 @@ def distance_matrix_gen(file_path, infinit):
     #                 dis_matrix[x][y] = 0.0
     #             dis_matrix[x][y] = min(dis_matrix[x][y],dis_matrix[x][z]+dis_matrix[z][y])
     # print(dis_matrix)
-    return dis_matrix,n,en
+    return dis_matrix,n,en,edges,W
 
 def delay_matrix_gen(dis_matrix, infinite):
     """

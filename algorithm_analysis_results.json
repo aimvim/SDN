@@ -1,0 +1,310 @@
+{
+  "best_algorithms": {
+    "Arnes_1": {
+      "algorithm": "mini",
+      "topology": "Arnes",
+      "controller_num": 1,
+      "avg_latency": 0.4319898627716886,
+      "worst_latency": 0.8183052597281418,
+      "load": 0.0,
+      "avg_compute_time": 0.0003496299998369068,
+      "score": 0.4323394927715255
+    },
+    "Arnes_2": {
+      "algorithm": "sa",
+      "topology": "Arnes",
+      "controller_num": 2,
+      "avg_latency": 0.27707628651403965,
+      "worst_latency": 0.5693488970444789,
+      "load": 0.0,
+      "avg_compute_time": 0.03923237400013022,
+      "score": 0.3163086605141699
+    },
+    "Arnes_3": {
+      "algorithm": "sa",
+      "topology": "Arnes",
+      "controller_num": 3,
+      "avg_latency": 0.23241001799731953,
+      "worst_latency": 0.6974479513124681,
+      "load": 0.4714045207910317,
+      "avg_compute_time": 0.03977106200007256,
+      "score": 0.7435856007884237
+    },
+    "Arnes_4": {
+      "algorithm": "sa",
+      "topology": "Arnes",
+      "controller_num": 4,
+      "avg_latency": 0.16517817573922414,
+      "worst_latency": 0.5415940298295858,
+      "load": 0.5,
+      "avg_compute_time": 0.043013669999782,
+      "score": 0.7081918457390061
+    },
+    "Arnes_5": {
+      "algorithm": "nsgaii",
+      "topology": "Arnes",
+      "controller_num": 5,
+      "avg_latency": 0.195533815800932,
+      "worst_latency": 0.4788761196120282,
+      "load": 0.39999999999999997,
+      "avg_compute_time": 0.32633801199961454,
+      "score": 0.9218718278005466
+    },
+    "Arnes_6": {
+      "algorithm": "sa",
+      "topology": "Arnes",
+      "controller_num": 6,
+      "avg_latency": 0.14784136168325904,
+      "worst_latency": 0.5469617742459241,
+      "load": 0.9428090415820634,
+      "avg_compute_time": 0.04675529000000097,
+      "score": 1.1374056932653234
+    },
+    "Bellcanada_1": {
+      "algorithm": "mini",
+      "topology": "Bellcanada",
+      "controller_num": 1,
+      "avg_latency": 10.747178904435932,
+      "worst_latency": 26.785219734105688,
+      "load": 0.0,
+      "avg_compute_time": 0.00069393299985677,
+      "score": 10.74787283743579
+    },
+    "Bellcanada_2": {
+      "algorithm": "mini",
+      "topology": "Bellcanada",
+      "controller_num": 2,
+      "avg_latency": 4.482975531979172,
+      "worst_latency": 20.52265046724241,
+      "load": 0.0,
+      "avg_compute_time": 0.01893339800008107,
+      "score": 4.501908929979254
+    },
+    "Bellcanada_3": {
+      "algorithm": "sa",
+      "topology": "Bellcanada",
+      "controller_num": 3,
+      "avg_latency": 4.68953072634451,
+      "worst_latency": 18.762329090127846,
+      "load": 3.559026084010437,
+      "avg_compute_time": 0.04993935599981342,
+      "score": 8.298496166354761
+    },
+    "Bellcanada_4": {
+      "algorithm": "sa",
+      "topology": "Bellcanada",
+      "controller_num": 4,
+      "avg_latency": 3.251735473806526,
+      "worst_latency": 19.851442220007563,
+      "load": 0.0,
+      "avg_compute_time": 0.051945346999564206,
+      "score": 3.30368082080609
+    },
+    "Bellcanada_5": {
+      "algorithm": "sa",
+      "topology": "Bellcanada",
+      "controller_num": 5,
+      "avg_latency": 2.9583700721935826,
+      "worst_latency": 19.851442220007563,
+      "load": 2.0591260281974,
+      "avg_compute_time": 0.05357504900021013,
+      "score": 5.071071149391193
+    },
+    "Bellcanada_6": {
+      "algorithm": "sa",
+      "topology": "Bellcanada",
+      "controller_num": 6,
+      "avg_latency": 2.94695566892108,
+      "worst_latency": 20.52265046724241,
+      "load": 0.5773502691896257,
+      "avg_compute_time": 0.05922187100048177,
+      "score": 3.5835278091111875
+    },
+    "Bics_1": {
+      "algorithm": "mini",
+      "topology": "Bics",
+      "controller_num": 1,
+      "avg_latency": 4.418274769737546,
+      "worst_latency": 11.285026299119192,
+      "load": 0.0,
+      "avg_compute_time": 0.0003290500002913177,
+      "score": 4.418603819737838
+    },
+    "Bics_2": {
+      "algorithm": "nsgaii",
+      "topology": "Bics",
+      "controller_num": 2,
+      "avg_latency": 3.710274397480091,
+      "worst_latency": 9.860242019797278,
+      "load": 0.5,
+      "avg_compute_time": 0.29337803600006734,
+      "score": 4.503652433480159
+    },
+    "Bics_3": {
+      "algorithm": "sa",
+      "topology": "Bics",
+      "controller_num": 3,
+      "avg_latency": 3.2598106284169486,
+      "worst_latency": 10.624337813396064,
+      "load": 0.0,
+      "avg_compute_time": 0.03994946099992376,
+      "score": 3.299760089416872
+    },
+    "Bics_4": {
+      "algorithm": "sa",
+      "topology": "Bics",
+      "controller_num": 4,
+      "avg_latency": 2.8328897755421325,
+      "worst_latency": 9.674372165263629,
+      "load": 0.4330127018922193,
+      "avg_compute_time": 0.04134247099980712,
+      "score": 3.3072449484341586
+    },
+    "Bics_5": {
+      "algorithm": "sa",
+      "topology": "Bics",
+      "controller_num": 5,
+      "avg_latency": 2.5928364682262344,
+      "worst_latency": 8.048411378267556,
+      "load": 0.7999999999999999,
+      "avg_compute_time": 0.043237095000222325,
+      "score": 3.4360735632264565
+    },
+    "Bics_6": {
+      "algorithm": "nsgaii",
+      "topology": "Bics",
+      "controller_num": 6,
+      "avg_latency": 2.147325366893994,
+      "worst_latency": 9.860242019797278,
+      "load": 0.7637626158259734,
+      "avg_compute_time": 0.4079719359998126,
+      "score": 3.3190599187197796
+    },
+    "Iris_1": {
+      "algorithm": "mini",
+      "topology": "Iris",
+      "controller_num": 1,
+      "avg_latency": 1.1073704861626805,
+      "worst_latency": 2.2982414806721145,
+      "load": 0.0,
+      "avg_compute_time": 0.0007596940000075846,
+      "score": 1.1081301801626882
+    },
+    "Iris_2": {
+      "algorithm": "mini",
+      "topology": "Iris",
+      "controller_num": 2,
+      "avg_latency": 0.7891002399454227,
+      "worst_latency": 1.966152495592072,
+      "load": 0.5,
+      "avg_compute_time": 0.051177600000000045,
+      "score": 1.3402778399454225
+    },
+    "Iris_3": {
+      "algorithm": "sa",
+      "topology": "Iris",
+      "controller_num": 3,
+      "avg_latency": 0.640994268531352,
+      "worst_latency": 2.019510559748388,
+      "load": 0.0,
+      "avg_compute_time": 0.05081455400038976,
+      "score": 0.6918088225317418
+    },
+    "Iris_4": {
+      "algorithm": "sa",
+      "topology": "Iris",
+      "controller_num": 4,
+      "avg_latency": 0.6261828269813964,
+      "worst_latency": 1.3488110802341373,
+      "load": 0.4330127018922193,
+      "avg_compute_time": 0.05464077799988445,
+      "score": 1.1138363068735002
+    },
+    "Iris_5": {
+      "algorithm": "sa",
+      "topology": "Iris",
+      "controller_num": 5,
+      "avg_latency": 0.5641080403318511,
+      "worst_latency": 1.774893661636563,
+      "load": 0.7483314773547882,
+      "avg_compute_time": 0.056743893999955615,
+      "score": 1.3691834116865949
+    },
+    "Iris_6": {
+      "algorithm": "nsgaii",
+      "topology": "Iris",
+      "controller_num": 6,
+      "avg_latency": 0.42896887638374503,
+      "worst_latency": 1.0798148516081396,
+      "load": 0.5,
+      "avg_compute_time": 0.44313580900023225,
+      "score": 1.3721046853839773
+    },
+    "Netrail_1": {
+      "algorithm": "mini",
+      "topology": "Netrail",
+      "controller_num": 1,
+      "avg_latency": 5.893032568659883,
+      "worst_latency": 19.827475570403276,
+      "load": 0.0,
+      "avg_compute_time": 1.7842999659478666e-05,
+      "score": 5.893050411659542
+    },
+    "Netrail_2": {
+      "algorithm": "sa",
+      "topology": "Netrail",
+      "controller_num": 2,
+      "avg_latency": 4.1080103260084835,
+      "worst_latency": 17.33750771052521,
+      "load": 0.5,
+      "avg_compute_time": 0.023453995999880135,
+      "score": 4.631464322008363
+    },
+    "Netrail_3": {
+      "algorithm": "mini",
+      "topology": "Netrail",
+      "controller_num": 3,
+      "avg_latency": 1.631223510219168,
+      "worst_latency": 4.946833719339704,
+      "load": 0.9428090415820634,
+      "avg_compute_time": 0.00013001799990888685,
+      "score": 2.5741625698011403
+    },
+    "Netrail_4": {
+      "algorithm": "mini",
+      "topology": "Netrail",
+      "controller_num": 4,
+      "avg_latency": 0.9245329788849244,
+      "worst_latency": 4.797376578025696,
+      "load": 0.82915619758885,
+      "avg_compute_time": 0.0001571529998909682,
+      "score": 1.7538463294736653
+    },
+    "Netrail_5": {
+      "algorithm": "mini",
+      "topology": "Netrail",
+      "controller_num": 5,
+      "avg_latency": 0.2391934677383964,
+      "worst_latency": 1.38399827449561,
+      "load": 0.8,
+      "avg_compute_time": 0.00011453300016000867,
+      "score": 1.0393080007385564
+    },
+    "Netrail_6": {
+      "algorithm": "mini",
+      "topology": "Netrail",
+      "controller_num": 6,
+      "avg_latency": 0.0414794285247378,
+      "worst_latency": 0.2903559996731646,
+      "load": 0.3726779962499649,
+      "avg_compute_time": 4.555599996820092e-05,
+      "score": 0.4142029807746709
+    }
+  },
+  "summary": {
+    "total_configs": 30,
+    "avg_score": 30.45203027835073,
+    "min_score": 0.3163086605141699,
+    "max_score": 1517.1511950763838
+  }
+}

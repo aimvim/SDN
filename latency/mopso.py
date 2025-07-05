@@ -20,7 +20,7 @@ infinit = 99999
 toponame = "Netrail.txt"
 test_num = 100
 
-distance_matrix, num_switches, num_links = mas.distance_matrix_gen(toponame, infinit)
+distance_matrix, num_switches, num_links, edges, matrix = mas.distance_matrix_gen(toponame, infinit)
 dis_matrix, _, _ = ma.distance_matrix_gen(toponame, infinit)
 delay_matrix = ma.delay_matrix_gen(dis_matrix, infinit)
 
@@ -230,6 +230,6 @@ print("代表性解控制器位置:", sorted(best_solution))
 print(f"平均时延: {best_solution.fitness.values[0]}")
 print(f"负载标准差: {best_solution.fitness.values[1]}")
 print(f"平均存活概率: {best_solution.fitness.values[2]}")
-save_results_to_file_mopso("..\\test_data.txt", toponame, num_switches, num_links,
-                           num_controllers, best_solution.fitness.values[0],worst_delay,
-                           best_solution.fitness.values[1],runtime)
+# save_results_to_file_mopso("..\\test_data.txt", toponame, num_switches, num_links,
+#                            num_controllers, best_solution.fitness.values[0],worst_delay,
+#                            best_solution.fitness.values[1],runtime)

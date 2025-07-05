@@ -23,7 +23,7 @@ test_num = 100
 
 # distance_matrix = np.random.randint(1, 10, (num_switches, num_switches))
 # np.fill_diagonal(distance_matrix, 0)
-distance_matrix, num_switches, num_links = mas.distance_matrix_gen(toponame, infinit)
+distance_matrix, num_switches, num_links, edges, adj_matrix = mas.distance_matrix_gen(toponame, infinit)
 dis_matrix, _, _ = ma.distance_matrix_gen(toponame, infinit)
 delay_matrix = ma.delay_matrix_gen(dis_matrix, infinit)
 

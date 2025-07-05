@@ -43,7 +43,8 @@ def find_controller_place(matrix, k):
 
             # 计算当前组合的时延
         sc_avg, sc_worst, cc_avg, cc_worst = compute_latency(matrix, switch_set, controller_place)
-        total_latency = 0.95*sc_avg + 0.05*cc_avg  # 综合时延指标（可调整权重）,这个位置的具体计算方法文章也没说，后面调一下权重就行
+        loadstd=load(switch_set)
+        total_latency = 0.5*sc_avg + 0*cc_avg + 0.5*loadstd # 综合时延指标（可调整权重）,这个位置的具体计算方法文章也没说，后面调一下权重就行
 
         # 更新最优解
         if total_latency < best_latency:
@@ -101,6 +102,7 @@ def mini_algorithm(toponame, contronller_num,test_num):
     sc_average_latency, sc_worst_latency, cc_average_latency, cc_worst_latency=\
         compute_latency(delay_matrix, switch_set, controller_place)
     loadd=load(switch_set)
+    print(controller_place)
     return toponame,n,en,contronller_num,sc_average_latency,sc_worst_latency,cc_average_latency,cc_worst_latency,loadd,run_time
 
 
