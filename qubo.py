@@ -36,7 +36,7 @@ qubo_model.set_objective(obj)
 kw.qubo.details(obj)
 
 # 约束：每个交换机由且仅由一个控制器管辖，行和为1
-qubo_model.add_constraint(x.sum(axis=1) == 1, "switch_cons", penalty=100, constr_type='hard')
+qubo_model.add_constraint(x.sum(axis=1) == 1, "switch_cons", penalty=50, constr_type='hard')
 
 # 约束：x与y之间的关系
 for j in range(n):
@@ -49,7 +49,7 @@ for j in range(n):
     qubo_model.add_constraint(y[j] <= column_sum, f"y_{j}_leq_sum_x_{j}_constraint", penalty=10, constr_type='hard')
 
 #约束控制器数量为k
-qubo_model.add_constraint(y.sum() == k, "controller_cons", penalty=50, constr_type='hard')
+qubo_model.add_constraint(y.sum() == k, "controller_cons", penalty=25, constr_type='hard')
 
 
 # 生成 QUBO 矩阵并求解
