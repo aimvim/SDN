@@ -1,0 +1,32 @@
+toponame: Iris.txt, num_switches: 51, num_controllers: 4
+position: [6, 18, 27, 48]
+avg_delay: 0.6173550514830906
+load_std: 0.4330127018922193
+worst_delay: 1.6167885404167364
+fitness: 0.07416902276337646
+run_time: 3.52534818649292 s
+收敛曲线已保存为 'gwo_convergence.png'
+toponame: Iris.txt, num_switches: 51, num_controllers: 4
+position: [1, 17, 30, 47]
+avg_delay: 0.6261828269813964
+load_std: 0.4330127018922193
+worst_delay: 1.271191043251045
+fitness: 0.07461041153829176
+run_time: 3.2361128330230713 s
+收敛曲线已保存为 'gwo_convergence.png'
+toponame: Iris.txt, num_switches: 51, num_controllers: 4
+position: [1, 17, 30, 47]
+avg_delay: 0.6261828269813964
+load_std: 0.4330127018922193
+worst_delay: 1.271191043251045
+fitness: 0.07461041153829176
+run_time: 3.460016965866089 s
+收敛曲线已保存为 'gwo_convergence.png'
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 14, 16, 19]
+avg_delay: 2.8328897755421325
+load_std: 0.4330127018922193
+worst_delay: 9.674372165263629
+fitness: 0.18494575896632853
+run_time: 1.9449152946472168 s
+收敛曲线已保存为 'gwo_convergence.png'

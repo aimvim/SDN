@@ -1,0 +1,224 @@
+=== Enhanced BKA Algorithm Results ===
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 14, 16, 19]
+avg_delay: 2.832890
+load_std: 0.433013
+worst_delay: 9.674372
+fitness: 0.184946
+iterations_used: 36
+run_time: 1.5241 s
+收敛曲线已保存为 'bka_02_convergence.png'
+优化策略: 早停检测 + 精英保留 + 自适应参数 + 多样性增强 + 局部搜索
+
+==================================================
+
+=== Enhanced BKA Algorithm Results ===
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 14, 16, 32]
+avg_delay: 2.889726
+load_std: 0.433013
+worst_delay: 9.674372
+fitness: 0.187788
+iterations_used: 36
+run_time: 0.9190 s
+收敛曲线已保存为 'bka_02_convergence.png'
+优化策略: 早停检测 + 精英保留
+
+==================================================
+
+=== Enhanced BKA Algorithm Results ===
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [3, 8, 10, 19]
+avg_delay: 2.996752
+load_std: 0.433013
+worst_delay: 10.152082
+fitness: 0.193139
+iterations_used: 26
+run_time: 0.7529 s
+收敛曲线已保存为 'bka_02_convergence.png'
+优化策略: 早停检测 + 精英保留
+
+==================================================
+
+=== Enhanced BKA Algorithm Results ===
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 16, 22, 32]
+avg_delay: 2.968455
+load_std: 0.433013
+worst_delay: 9.793441
+fitness: 0.191724
+iterations_used: 28
+run_time: 0.7426 s
+收敛曲线已保存为 'bka_02_convergence.png'
+优化策略: 早停检测 + 精英保留
+
+==================================================
+
+=== Enhanced BKA Algorithm Results ===
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 14, 16, 19]
+avg_delay: 2.832890
+load_std: 0.433013
+worst_delay: 9.674372
+fitness: 0.184946
+iterations_used: 45
+run_time: 0.8601 s
+收敛曲线已保存为 'bka_02_convergence.png'
+优化策略: 早停检测 + 精英保留
+
+==================================================
+
+=== Enhanced BKA Algorithm Results ===
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 12, 16, 32]
+avg_delay: 3.062447
+load_std: 0.433013
+worst_delay: 10.624338
+fitness: 0.196424
+iterations_used: 26
+run_time: 0.7185 s
+收敛曲线已保存为 'bka_02_convergence.png'
+优化策略: 早停检测 + 精英保留
+
+==================================================
+
+=== Enhanced BKA Algorithm Results ===
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 10, 14, 19]
+avg_delay: 2.915998
+load_std: 0.433013
+worst_delay: 9.674372
+fitness: 0.189101
+iterations_used: 47
+run_time: 0.8138 s
+收敛曲线已保存为 'bka_02_convergence.png'
+优化策略: 早停检测 + 精英保留
+
+==================================================
+
+=== Enhanced BKA Algorithm Results ===
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [6, 10, 14, 19]
+avg_delay: 3.085505
+load_std: 0.433013
+worst_delay: 9.674372
+fitness: 0.197577
+iterations_used: 42
+run_time: 0.8767 s
+收敛曲线已保存为 'bka_02_convergence.png'
+优化策略: 早停检测 + 精英保留
+
+==================================================
+
+=== Enhanced BKA Algorithm Results ===
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 14, 16, 19]
+avg_delay: 2.832890
+load_std: 0.433013
+worst_delay: 9.674372
+fitness: 0.184946
+iterations_used: 41
+run_time: 0.8867 s
+收敛曲线已保存为 'bka_02_convergence.png'
+优化策略: 早停检测 + 精英保留
+
+==================================================
+
+=== Enhanced BKA Algorithm Results ===
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 11, 13, 21]
+avg_delay: 2.948521
+load_std: 0.433013
+worst_delay: 8.048411
+fitness: 0.190727
+iterations_used: 39
+run_time: 0.8140 s
+收敛曲线已保存为 'bka_02_convergence.png'
+优化策略: 早停检测 + 精英保留
+
+==================================================
+
+=== Enhanced BKA Algorithm Results ===
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [6, 14, 16, 32]
+avg_delay: 3.090057
+load_std: 0.433013
+worst_delay: 9.674372
+fitness: 0.197804
+iterations_used: 31
+run_time: 0.7597 s
+收敛曲线已保存为 'bka_02_convergence.png'
+优化策略: 早停检测 + 精英保留
+
+==================================================
+
+=== Enhanced BKA Algorithm Results ===
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 10, 14, 19]
+avg_delay: 2.915998
+load_std: 0.433013
+worst_delay: 9.674372
+fitness: 0.189101
+iterations_used: 33
+run_time: 0.7593 s
+收敛曲线已保存为 'bka_02_convergence.png'
+优化策略: 早停检测 + 精英保留
+
+==================================================
+
+=== Enhanced BKA Algorithm Results ===
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 11, 16, 22]
+avg_delay: 2.912937
+load_std: 0.433013
+worst_delay: 9.793441
+fitness: 0.188948
+iterations_used: 29
+run_time: 0.6706 s
+收敛曲线已保存为 'bka_02_convergence.png'
+优化策略: 早停检测 + 精英保留
+
+==================================================
+
+=== Enhanced BKA Algorithm Results ===
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 11, 16, 22]
+avg_delay: 2.912937
+load_std: 0.433013
+worst_delay: 9.793441
+fitness: 0.188948
+iterations_used: 29
+run_time: 0.7478 s
+收敛曲线已保存为 'bka_02_convergence.png'
+优化策略: 早停检测 + 精英保留
+
+==================================================
+
+=== Enhanced BKA Algorithm Results ===
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 13, 14, 19]
+avg_delay: 2.844488
+load_std: 0.433013
+worst_delay: 9.674372
+fitness: 0.185526
+iterations_used: 42
+run_time: 0.7936 s
+收敛曲线已保存为 'bka_02_convergence.png'
+优化策略: 早停检测 + 精英保留
+
+==================================================
+
+=== Enhanced BKA Algorithm Results ===
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 13, 14, 19]
+avg_delay: 2.844488
+load_std: 0.433013
+worst_delay: 9.674372
+fitness: 0.185526
+iterations_used: 56
+run_time: 0.8470 s
+收敛曲线已保存为 'bka_02_convergence.png'
+优化策略: 早停检测 + 精英保留
+
+==================================================
+

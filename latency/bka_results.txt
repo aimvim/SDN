@@ -1,0 +1,152 @@
+toponame: Arnes.txt, num_switches: 34, num_controllers: 4
+position: [2, 4, 17, 28]
+avg_delay: 0.16452448874123582
+load_std: 0.5
+worst_delay: 0.5415940298295858
+fitness: 0.058226224437061797
+run_time: 1.0900242328643799 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Arnes.txt, num_switches: 34, num_controllers: 4
+position: [2, 4, 11, 17]
+avg_delay: 0.17159161670241274
+load_std: 0.5
+worst_delay: 0.5693488970444789
+fitness: 0.05857958083512064
+run_time: 0.6091461181640625 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Arnes.txt, num_switches: 34, num_controllers: 4
+position: [4, 17, 25, 28]
+avg_delay: 0.16452448874123582
+load_std: 0.5
+worst_delay: 0.5415940298295858
+fitness: 0.058226224437061797
+run_time: 0.6111042499542236 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Arnes.txt, num_switches: 34, num_controllers: 4
+position: [4, 17, 27, 32]
+avg_delay: 0.17463719264887687
+load_std: 0.5
+worst_delay: 0.5415940298295858
+fitness: 0.058731859632443845
+run_time: 1.142807960510254 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Arnes.txt, num_switches: 34, num_controllers: 4
+position: [2, 4, 17, 28]
+avg_delay: 0.16452448874123582
+load_std: 0.5
+worst_delay: 0.5415940298295858
+fitness: 0.058226224437061797
+run_time: 0.6517834663391113 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Arnes.txt, num_switches: 34, num_controllers: 4
+position: [7, 19, 27, 32]
+avg_delay: 0.18184983008281702
+load_std: 0.5
+worst_delay: 0.4788761196120282
+fitness: 0.05909249150414085
+run_time: 0.6292133331298828 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Arnes.txt, num_switches: 34, num_controllers: 4
+position: [4, 17, 27, 32]
+avg_delay: 0.17463719264887687
+load_std: 0.5
+worst_delay: 0.5415940298295858
+fitness: 0.058731859632443845
+run_time: 0.6309480667114258 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Arnes.txt, num_switches: 34, num_controllers: 4
+position: [4, 14, 25, 28]
+avg_delay: 0.16758290837852782
+load_std: 0.5
+worst_delay: 0.5415940298295858
+fitness: 0.058379145418926394
+run_time: 0.6333215236663818 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Arnes.txt, num_switches: 34, num_controllers: 4
+position: [4, 17, 25, 28]
+avg_delay: 0.16452448874123582
+load_std: 0.5
+worst_delay: 0.5415940298295858
+fitness: 0.058226224437061797
+run_time: 0.9620347023010254 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Arnes.txt, num_switches: 34, num_controllers: 4
+position: [2, 4, 17, 28]
+avg_delay: 0.16452448874123582
+load_std: 0.5
+worst_delay: 0.5415940298295858
+fitness: 0.058226224437061797
+run_time: 0.9396727085113525 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Iris.txt, num_switches: 51, num_controllers: 4
+position: [6, 18, 27, 48]
+avg_delay: 0.6173550514830906
+load_std: 0.4330127018922193
+worst_delay: 1.6167885404167364
+fitness: 0.07416902276337646
+run_time: 1.1005713939666748 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Iris.txt, num_switches: 51, num_controllers: 4
+position: [6, 18, 27, 48]
+avg_delay: 0.6173550514830906
+load_std: 0.4330127018922193
+worst_delay: 1.6167885404167364
+fitness: 0.07416902276337646
+run_time: 1.0665199756622314 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 14, 16, 32]
+avg_delay: 2.889726167518801
+load_std: 0.4330127018922193
+worst_delay: 9.674372165263629
+fitness: 0.18778757856516198
+run_time: 0.9489967823028564 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 14, 16, 32]
+avg_delay: 2.889726167518801
+load_std: 0.4330127018922193
+worst_delay: 9.674372165263629
+fitness: 0.18778757856516198
+run_time: 1.3570771217346191 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 14, 16, 32]
+avg_delay: 2.889726167518801
+load_std: 0.4330127018922193
+worst_delay: 9.674372165263629
+fitness: 0.18778757856516198
+run_time: 0.9203405380249023 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 14, 16, 32]
+avg_delay: 2.889726167518801
+load_std: 0.4330127018922193
+worst_delay: 9.674372165263629
+fitness: 0.18778757856516198
+run_time: 0.8964011669158936 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 14, 16, 32]
+avg_delay: 2.889726167518801
+load_std: 0.4330127018922193
+worst_delay: 9.674372165263629
+fitness: 0.18778757856516198
+run_time: 0.8968839645385742 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 14, 16, 19]
+avg_delay: 2.8328897755421325
+load_std: 0.4330127018922193
+worst_delay: 9.674372165263629
+fitness: 0.18494575896632853
+run_time: 0.9450175762176514 s
+收敛曲线已保存为 'bka_convergence.png'
+toponame: Bics.txt, num_switches: 33, num_controllers: 4
+position: [8, 14, 16, 32]
+avg_delay: 2.889726167518801
+load_std: 0.4330127018922193
+worst_delay: 9.674372165263629
+fitness: 0.18778757856516198
+run_time: 1.4031383991241455 s
+收敛曲线已保存为 'bka_convergence.png'
